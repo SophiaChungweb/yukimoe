@@ -8,8 +8,8 @@ header {
 	height: 25px;
 	background-color: black;
 }
-
-main {
+// html5的main有加id要留意scss，要加#
+#main {
 	// 寬度 高度 背景顏色
 	width: 300px;
 	height: 450px;
