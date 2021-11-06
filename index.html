@@ -25,8 +25,155 @@
 <!-- html5響應式網頁架構id(唯一 #) class(類別 .) 語意式標籤語-->
 <!-- 頁首header 每頁固定 主內容main 隨頁面內容而有所不同，IE瀏覽器不支援  頁尾footer 每頁固定 文章(article)，IE支援取代main標籤 -->
 <!-- div是區塊標籤 -->
-    <header></header>
-    <article id="main"></article>
-    <footer></footer>
+<!-- LOGO圖 主按鈕：首頁 關於手作花園 喜餅禮盒介紹 產品訂購 最新消息 訂單查詢 聯絡我們 小圖示 小購物車圖示 -->
+    <header>
+        <nav>
+            <h1 id="logo">DIY COOKIE</h1>
+            <ul class="btnbox">
+                <li>首頁</li>
+                <li>關於手作花園</li>
+                <li>喜餅禮盒介紹</li>
+                <li>產品訂購</li>
+                    <ul class="foodbox">
+                        <li>中式</li>
+                        <li>西式</li>
+                    </ul>
+                <li>最新消息</li>
+                <li>訂單查詢</li>
+                <li>聯絡我們</li>
+            </ul>
+            <!-- icon 區塊標籤div id：icon -->
+            <div id="icon">
+                <li class="member">會員</li>
+                <li class="shoppingcar">購物車</li>
+                <li class="search">搜尋</li>
+            </div>
+        </nav>
+    </header>
+    <article>
+        <!-- 廣告區塊 div 命名 輪播功能用 javascript 命名建議用 ID選擇器；css3輪播功能 命名 ID選擇器或是 類別選擇器(class) -->
+        <div id="banner">
+            <div class="leftbtn">按鈕</div>
+            <ul id="imgbox">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <div class="rightbtn">按鈕</div>
+        </div>
+
+        <!-- 限量商品 好物分享 -->
+        <article id="">
+            <h1>限量商品</h1>
+            <!-- 區段 section -->
+            <section class="lcommodity">
+                <p class="images">商品圖片</p>
+                <p class="lname">
+                    <h3>商品名稱</h3>
+                    <ul>
+                        <li class="love">我的最愛</li>
+                        <li class="car">購物車</li>
+                    </ul>
+                </p>
+                  <!--螢光標記 mark -->
+                <p class="brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13個字數</mark> )，會利用…設計</p>
+                <ul>
+                    <li class="originalprice">原價<span><s>1,000</s></span>元</li>
+                    <li class="bargainprice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+            <section class="lcommodity">
+                <p class="images">商品圖片</p>
+                <p class="lname">
+                    <h3>商品名稱</h3>
+                    <ul>
+                        <li class="love">我的最愛</li>
+                        <li class="car">購物車</li>
+                    </ul>
+                </p>
+                  <!--螢光標記 mark -->
+                <p class="brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13個字數</mark> )，會利用…設計</p>
+                <ul>
+                    <li class="originalprice">原價<span><s>1,000</s></span>元</li>
+                    <li class="bargainprice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+            <section class="lcommodity">
+                <p class="images">商品圖片</p>
+                <p class="lname">
+                    <h3>商品名稱</h3>
+                    <ul>
+                        <li class="love">我的最愛</li>
+                        <li class="car">購物車</li>
+                    </ul>
+                </p>
+                  <!--螢光標記 mark -->
+                <p class="brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13個字數</mark> )，會利用…設計</p>
+                <ul>
+                    <li class="originalprice">原價<span><s>1,000</s></span>元</li>
+                    <li class="bargainprice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+            <section class="lcommodity">
+                <p class="images">商品圖片</p>
+                <p class="lname">
+                    <h3>商品名稱</h3>
+                    <ul>
+                        <li class="love">我的最愛</li>
+                        <li class="car">購物車</li>
+                    </ul>
+                </p>
+                  <!--螢光標記 mark -->
+                <p class="brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13個字數</mark> )，會利用…設計</p>
+                <ul>
+                    <li class="originalprice">原價<span><s>1,000</s></span>元</li>
+                    <li class="bargainprice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+        </article>
+
+        <article id="">
+            <h1>好物分享</h1>
+        </article>
+    </article>
+    <article>
+        <!-- 側邊欄 aside 商品分類(建議中大型購物車設定) -->
+    <aside>
+        <!-- 項目清單分類 -->
+        <ul id="chinese">
+            <h4>中式</h4>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="english">
+            <h4>西式</h4>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </aside>
+    </article>
+
+    <footer>
+        <!-- 擁有者資訊 建議瀏覽器解析度 瀏覽人數(比較少用，資料庫運作) 版權聲明 連結：隱私權政策 網站安全政策 服務條款 商品的次選單 -->
+        <!-- 段落標籤 p ；行內範圍 span(不會另外換行)-->
+        <p>DIY COOKIE版權宣告 &copy; 2019 - <span id="year">2021</span> YUKIMOE DESIGN</p>
+        <!--聯絡資訊 address 地址、客服電話、e-mail、LINEID、FB、googlemap  -->
+        <address>
+            <p class="adress">台中市</p>
+            <p class="tel">0911-000-000</p>
+            <p class="e-mail">123456@gmail.com</p>
+            <p class="lineid">LINEID</p>
+            <p class="fb">FB</p>
+            <p class="googlemap">地圖</p>
+        </address>
+    </footer>
 </body>
 </html>
