@@ -5,10 +5,12 @@
 header {
 	nav {
 		.btnbox {
-			background-color: burlywood;
-			.foodbox {
-				background-color: greenyellow;
-			}
+			//隱藏
+			display: none;
+		}
+		.iconbox {
+			//隱藏
+			display: none;
 		}
 	}
 }

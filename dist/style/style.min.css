@@ -1,2 +1,2 @@
-*{margin:0 auto;padding:0}img{width:100%;height:auto}@media screen and (max-width: 576px){header nav .btnbox{background-color:burlywood}header nav .btnbox .foodbox{background-color:greenyellow}}
+*{margin:0 auto;padding:0}img{width:100%;height:auto}@media screen and (max-width: 576px){header nav .btnbox{display:none}header nav .iconbox{display:none}}
 /*# sourceMappingURL=style.min.css.map */
