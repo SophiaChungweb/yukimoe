@@ -9,11 +9,16 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-  header nav .btnbox {
+  header {
+    width: 100%;
+  }
+  address,
+  #iconbox,
+  .btnbox {
     display: none;
   }
-  header nav .iconbox {
-    display: none;
+  #menubtn {
+    background-color: burlywood;
   }
 }
 /*# sourceMappingURL=style.css.map */
