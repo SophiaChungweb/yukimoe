@@ -7,10 +7,12 @@ header {
     width: $w10 * 10;
     nav {
         #iconbox {
-
+            // 開啟隱藏物件
+            @include OB;
         }
         .btnbox {
-
+            // 開啟隱藏物件
+            @include OB;
         }
         #menubtn{
             @include DN;

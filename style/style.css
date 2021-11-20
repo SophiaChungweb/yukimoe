@@ -71,6 +71,12 @@ img {
     background-color: yellowgreen;
     width: 100%;
   }
+  header nav #iconbox {
+    display: block;
+  }
+  header nav .btnbox {
+    display: block;
+  }
   header nav #menubtn {
     display: none;
   }
@@ -85,9 +91,12 @@ img {
     width: 100%;
   }
   header nav #iconbox {
-    display: none;
+    display: block;
   }
   header nav .btnbox {
+    display: block;
+  }
+  header nav #menubtn {
     display: none;
   }
   footer address {
