@@ -34,7 +34,8 @@ img {
     background-color: wheat;
   }
   header nav #logo {
-    width: 80%;
+    width: 85%;
+    width: 85%;
     float: left;
     background-color: brown;
   }
@@ -45,7 +46,7 @@ img {
     display: none;
   }
   header nav #menubtn {
-    width: 20%;
+    width: 15%;
     float: left;
   }
   footer address {

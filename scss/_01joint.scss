@@ -28,6 +28,12 @@ $w10: 10%;
 	display: none;
 }
 
+// 計算區
+// 計算 header logo 與 btnbox 之間的寬度
+@mixin LBW($WM,$WA) {
+    width: $w10 * $WM + $WA;
+}
+
 // 撰寫 scss 的「混合函式 mixin」，修正 scss 的繼承功能，無法被 @media 使用的問題
 @mixin DN {
 	display: none;
