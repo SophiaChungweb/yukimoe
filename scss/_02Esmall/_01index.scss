@@ -14,30 +14,24 @@
 // 	background-color: burlywood;
 // }
 
-// 繼承區(相同樣式)
-%DN {
-	// 隱藏
-	display: none;
-}
-
 header {
-	// 寬度 100%;
-	width: $w10 * 10;
-	nav {
-		#iconbox {
-			// 呼叫繼承物件
-			@extend %DN;
-		}
-		.btnbox {
-			// 呼叫繼承物件
-			@extend %DN;
-		}
-	}
+    // 寬度 100%;
+    width: $w10 * 10;
+    nav {
+        #iconbox {
+            // 呼叫 混合函式
+            @include DN;
+        }
+        .btnbox {
+            // 呼叫 混合函式
+            @include DN;
+        }
+    }
 }
 
 footer {
-	address {
-		// 呼叫繼承物件
-		@extend %DN;
-	}
+    address {
+        // 呼叫 混合函式
+        @include DN;
+    }
 }
