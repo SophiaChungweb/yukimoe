@@ -18,9 +18,25 @@ img {
 @media screen and (max-width: 576px) {
   header {
     width: 100%;
+    background-color: violet;
+  }
+  header nav {
+    /*
+        浮動對齊的問題float
+        1、#logo與.btnbox物件的父框架nav.無寬度
+        2、nav的父框架 header ，高度消失(展開)
+        解決方式
+        1、nav 的父框架 header，給予高度；或是nav給予高度
+        2、清除浮動狀態，由nav設定
+        */
+    width: 100%;
+    height: 10vh;
+    background-color: wheat;
   }
   header nav #logo {
+    width: 80%;
     float: left;
+    background-color: brown;
   }
   header nav #iconbox {
     display: none;
@@ -29,6 +45,7 @@ img {
     display: none;
   }
   header nav #menubtn {
+    width: 20%;
     float: left;
   }
   footer address {

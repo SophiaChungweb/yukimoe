@@ -18,10 +18,29 @@
 header {
     // 寬度 100%;
     width: $w10 * 10;
+    background-color: violet;
     nav {
+        /*
+        浮動對齊的問題float
+        1、#logo與.btnbox物件的父框架nav.無寬度
+        2、nav的父框架 header ，高度消失(展開)
+        解決方式
+        1、nav 的父框架 header，給予高度；或是nav給予高度
+        2、清除浮動狀態，由nav設定
+        */
+        width: $w10 * 10;
+        // 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
+        // vh ( 螢幕可視裝置高度的百分比，計算出實際高度；依照裝置的高度計算 )
+        height: 10vh;
+        background-color: wheat;
+        // 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
+
         // 靠左排列(與menubtn同一行)
         #logo{
+            // 寬度 % or vw ( 螢幕可視裝置寬度的百分比 )
+            width: $w10 * 8;
             float: left;
+            background-color: brown;
         }
         #iconbox {
             // 呼叫 混合函式
@@ -33,6 +52,7 @@ header {
         }
         // 靠左排列(與logo同一行)
         #menubtn{
+            width: $w10 * 2;
             // 浮點對齊法：靠左對齊 float:left
             float: left;
         }
