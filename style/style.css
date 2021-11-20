@@ -28,9 +28,9 @@ img {
         解決方式
         1、nav 的父框架 header，給予高度；或是nav給予高度
         2、清除浮動狀態，由nav設定
+        3、利用圖片高度撐開父框架的高
         */
     width: 100%;
-    height: 10vh;
     background-color: wheat;
   }
   header nav #logo {
