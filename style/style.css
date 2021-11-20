@@ -45,4 +45,69 @@ img {
     display: none;
   }
 }
+
+@media screen and (min-width: 768px) {
+  header {
+    background-color: burlywood;
+    width: 100%;
+  }
+  header nav #iconbox {
+    display: none;
+  }
+  header nav .btnbox {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*
+大平板裝置的icon與btnox取消「隱藏顯示」，但無法讀取，
+因為，媒體判斷的順序是由 小尺寸語法 至 大尺寸 ，故 大尺寸沒有下達任何語法時，會直接直判讀至小尺寸
+*/
+  header {
+    background-color: yellowgreen;
+    width: 100%;
+  }
+  header nav #menubtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    background-color: blue;
+    width: 100%;
+  }
+  header nav #iconbox {
+    display: none;
+  }
+  header nav .btnbox {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    background-color: grey;
+    width: 100%;
+  }
+  header nav #iconbox {
+    display: none;
+  }
+  header nav .btnbox {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */

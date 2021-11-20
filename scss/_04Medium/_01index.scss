@@ -1,0 +1,21 @@
+header {
+    background-color: burlywood;
+    width: $w10 * 10;
+    nav {
+        #iconbox {
+            // 呼叫 混合函式
+            @include DN;
+        }
+        .btnbox {
+            // 呼叫 混合函式
+            @include DN;
+        }
+    }
+}
+
+footer {
+    address {
+        // 呼叫 混合函式
+        @include DN;
+    }
+}
