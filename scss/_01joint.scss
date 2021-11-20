@@ -1,16 +1,16 @@
 // 頁面與物件的間距：外間距--上下為0，左右自動；內間距上下左右為0；設定在「*」(通用選擇器)
 // 外間距--上下為0，左右自動 margin；若物件寬度小於100%時，物件將會自動垂直 置中
 * {
-    margin: 0 auto;
-    // 內間距上下左右為0 padding
-    padding: 0;
+	margin: 0 auto;
+	// 內間距上下左右為0 padding
+	padding: 0;
 }
 
 // 圖片等比控制
 img {
-    // 寬度 100%；高度自動
-    width: 100%;
-    height: auto;
+	// 寬度 100%；高度自動
+	width: 100%;
+	height: auto;
 }
 
 // 變數區
@@ -24,11 +24,11 @@ $w10: 10%;
  無法由@media(媒體判斷)去呼叫「外部連結檔」
 */
 %DN {
-    // 隱藏
-    display: none;
+	// 隱藏
+	display: none;
 }
 
 // 撰寫 scss 的「混合函式 mixin」，修正 scss 的繼承功能，無法被 @media 使用的問題
 @mixin DN {
-    display: none;
+	display: none;
 }
