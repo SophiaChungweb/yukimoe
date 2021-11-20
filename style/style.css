@@ -19,11 +19,17 @@ img {
   header {
     width: 100%;
   }
+  header nav #logo {
+    float: left;
+  }
   header nav #iconbox {
     display: none;
   }
   header nav .btnbox {
     display: none;
+  }
+  header nav #menubtn {
+    float: left;
   }
   footer address {
     display: none;
@@ -106,13 +112,16 @@ img {
 
 @media screen and (min-width: 1400px) {
   header {
-    background-color: grey;
+    background-color: rosybrown;
     width: 100%;
   }
   header nav #iconbox {
-    display: none;
+    display: block;
   }
   header nav .btnbox {
+    display: block;
+  }
+  header nav #menubtn {
     display: none;
   }
   footer address {

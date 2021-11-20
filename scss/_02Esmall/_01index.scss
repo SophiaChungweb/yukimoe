@@ -13,11 +13,16 @@
 // #menubtn {
 // 	background-color: burlywood;
 // }
+// 目前使用單位(數值)是百分比(%)：網頁的固定單位--像素 px
 
 header {
     // 寬度 100%;
     width: $w10 * 10;
     nav {
+        // 靠左排列(與menubtn同一行)
+        #logo{
+            float: left;
+        }
         #iconbox {
             // 呼叫 混合函式
             @include DN;
@@ -25,6 +30,11 @@ header {
         .btnbox {
             // 呼叫 混合函式
             @include DN;
+        }
+        // 靠左排列(與logo同一行)
+        #menubtn{
+            // 浮點對齊法：靠左對齊 float:left
+            float: left;
         }
     }
 }
