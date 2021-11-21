@@ -31,14 +31,14 @@ header {
         */
         width: $w10 * 10;
         // 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
-        background-color: wheat;
+        background-color: rgb(241, 105, 42);
         // 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
 
         // 靠左排列(與menubtn同一行)
         #logo{
             // 寬度 % or vw ( 螢幕可視裝置寬度的百分比 )
-            width: $w10 * 8 + 5%;
-            @include LBW(8,5%)
+            // width: $w10 * 8 + 5%;
+            // @include LBW(8,5%)
             float: left;
             background-color: brown;
         }
@@ -52,7 +52,7 @@ header {
         }
         // 靠左排列(與logo同一行)
         #menubtn{
-            width: $w10 * 1 + 5%;
+            // width: $w10 * 1 + 5%;
             // 浮點對齊法：靠左對齊 float:left
             float: left;
         }

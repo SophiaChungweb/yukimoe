@@ -14,7 +14,7 @@ img {
 }
 
 // 變數區
-$w10: 10%;
+$w10: 10vw;
 
 // 繼承區(相同樣式)：將 scss 的繼承功能，寫在共用檔內，因為位置編排有誤，故造成 編譯 時出錯
 /*
@@ -43,4 +43,15 @@ $w10: 10%;
 @mixin OB {
     // 顯示方式：區塊
     display: block;
+}
+
+// 清除浮動 float
+@mixin ClearFloat {
+	// 清除左右浮動
+	clear: both;
+}
+
+// 隱藏項目符號
+@mixin DNli {
+	list-style-type: none;
 }
