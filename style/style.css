@@ -37,6 +37,12 @@ img {
     float: left;
     background-color: brown;
   }
+  header nav #logo #logo {
+    width: 85vw;
+  }
+  header nav #logo #menubtn {
+    width: 15vw;
+  }
   header nav #iconbox {
     display: none;
   }
@@ -44,6 +50,7 @@ img {
     display: none;
   }
   header nav #menubtn {
+    width: 15vw;
     float: left;
   }
   footer address {
@@ -71,7 +78,13 @@ img {
   }
   header nav #logo {
     float: left;
-    background-color: brown;
+    background-color: palevioletred;
+  }
+  header nav #logo #logo {
+    width: 85vw;
+  }
+  header nav #logo #menubtn {
+    width: 15vw;
   }
   header nav #iconbox {
     display: none;
@@ -80,6 +93,7 @@ img {
     display: none;
   }
   header nav #menubtn {
+    width: 15vw;
     float: left;
   }
   footer address {
@@ -107,7 +121,7 @@ img {
   }
   header nav #logo {
     float: left;
-    background-color: brown;
+    background-color: pink;
   }
   header nav #iconbox {
     display: none;
@@ -117,6 +131,9 @@ img {
   }
   header nav #menubtn {
     float: left;
+  }
+  header nav .clear {
+    clear: both;
   }
   footer address {
     display: none;

@@ -26,11 +26,9 @@ header {
 
         // 靠左排列(與menubtn同一行)
         #logo{
-            // 寬度 % or vw ( 螢幕可視裝置寬度的百分比 )
-            // width: $w10 * 8 + 5%;
-            // @include LBW(8,5%)
+            // 寬度 向下相容；讀取 03small 設定值
             float: left;
-            background-color: brown;
+            background-color: pink;
         }
         #iconbox {
             // 呼叫 混合函式
@@ -42,9 +40,12 @@ header {
         }
         // 靠左排列(與logo同一行)
         #menubtn{
-            // width: $w10 * 1 + 5%;
+            // 寬度 向下相容；讀取 03small 設定值
             // 浮點對齊法：靠左對齊 float:left
             float: left;
+        }
+        .clear{
+            @include ClearFloat;
         }
     }
 }
