@@ -6,11 +6,11 @@
 // 目前使用單位(數值)是百分比(%)：網頁的固定單位--像素 px
 
 header {
-    // 寬度 100%;
-    width: $w10 * 10;
-    background-color: violet;
-    nav {
-        /*
+	// 寬度 100%;
+	width: $w10 * 10;
+	background-color: violet;
+	nav {
+		/*
         浮動對齊的問題float
         1、#logo與.btnbox物件的父框架nav.無寬度
         2、nav的父框架 header ，高度消失(展開)
@@ -19,41 +19,40 @@ header {
         2、清除浮動狀態，由nav設定
         3、利用圖片高度撐開父框架的高
         */
-        width: $w10 * 10;
-        // 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
-        background-color: rgb(179, 245, 185);
-        // 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
+		width: $w10 * 10;
+		// 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
+		background-color: rgb(179, 245, 185);
+		// 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
 
-        // 靠左排列(與menubtn同一行)
-        #logo{
-            // 寬度 % or vw ( 螢幕可視裝置寬度的百分比 )
-            // width: $w10 * 8 + 5%;
-            // 單位不同無法計算，所以改為同一位 vw
-            @include LBW(8,5vw)
-            float: left;
-            background-color: palevioletred;
-        }
-        #iconbox {
-            // 呼叫 混合函式
-            @include DN;
-        }
-        .btnbox {
-            // 呼叫 混合函式
-            @include DN;
-        }
-        // 靠左排列(與logo同一行)
-        #menubtn{
-            // 單位不同無法計算，所以改為同一位 vw
-            width: $w10 * 1 + 5vw;
-            // 浮點對齊法：靠左對齊 float:left
-            float: left;
-        }
-    }
+		// 單位不同無法計算，所以改為同一位 vw
+		// 引入的程式，執行結果為 logo 與 menubtn 的寬度，所以要寫在父框架(nav)
+		@include LBW(8,5vw);
+		// 靠左排列(與 menubtn 同一行)
+		#logo {
+			// 寬度 % or vw ( 螢幕可視裝置寬度的百分比 )
+			// width: $w10 * 8 + 5%;
+			float: left;
+			background-color: palevioletred;
+		}
+		#iconbox {
+			// 呼叫 混合函式
+			@include DN;
+		}
+		.btnbox {
+			// 呼叫 混合函式
+			@include DN;
+		}
+		// 靠左排列(與logo同一行)
+		#menubtn {
+			// 浮點對齊法：靠左對齊 float:left
+			float: left;
+		}
+	}
 }
 
 footer {
-    address {
-        // 呼叫 混合函式
-        @include DN;
-    }
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
 }

@@ -1,24 +1,11 @@
 header {
-    background-color: rosybrown;
-    width: $w10 * 10;
-    nav {
-        #iconbox {
-            // 開啟隱藏物件
-            @include OB;
-        }
-        .btnbox {
-            // 開啟隱藏物件
-            @include OB;
-        }
-        #menubtn{
-            @include DN;
-        }
-    }
+	background-color: rosybrown;
+	width: $w10 * 10;
 }
 
 footer {
-    address {
-        // 呼叫 混合函式
-        @include DN;
-    }
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
 }

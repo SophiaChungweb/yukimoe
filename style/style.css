@@ -34,14 +34,14 @@ img {
     background-color: #f1692a;
   }
   header nav #logo {
-    float: left;
-    background-color: brown;
-  }
-  header nav #logo #logo {
     width: 85vw;
   }
-  header nav #logo #menubtn {
+  header nav #menubtn {
     width: 15vw;
+  }
+  header nav #logo {
+    float: left;
+    background-color: brown;
   }
   header nav #iconbox {
     display: none;
@@ -50,7 +50,6 @@ img {
     display: none;
   }
   header nav #menubtn {
-    width: 15vw;
     float: left;
   }
   footer address {
@@ -77,14 +76,14 @@ img {
     background-color: #b3f5b9;
   }
   header nav #logo {
-    float: left;
-    background-color: palevioletred;
-  }
-  header nav #logo #logo {
     width: 85vw;
   }
-  header nav #logo #menubtn {
+  header nav #menubtn {
     width: 15vw;
+  }
+  header nav #logo {
+    float: left;
+    background-color: palevioletred;
   }
   header nav #iconbox {
     display: none;
@@ -93,7 +92,6 @@ img {
     display: none;
   }
   header nav #menubtn {
-    width: 15vw;
     float: left;
   }
   footer address {
@@ -191,15 +189,6 @@ img {
     background-color: blue;
     width: 100vw;
   }
-  header nav #iconbox {
-    display: block;
-  }
-  header nav .btnbox {
-    display: block;
-  }
-  header nav #menubtn {
-    display: none;
-  }
   footer address {
     display: none;
   }
@@ -209,15 +198,6 @@ img {
   header {
     background-color: rosybrown;
     width: 100vw;
-  }
-  header nav #iconbox {
-    display: block;
-  }
-  header nav .btnbox {
-    display: block;
-  }
-  header nav #menubtn {
-    display: none;
   }
   footer address {
     display: none;

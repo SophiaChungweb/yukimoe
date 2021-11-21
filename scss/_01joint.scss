@@ -32,18 +32,18 @@ $w10: 10vw;
 // 計算 header logo 與 menubtn 之間的寬度 手機裝置
 @mixin LBW($WM,$WA) {
 	// 計算區 1.設變數(承載值的物件名稱)$WM=倍數 $WA=加的數值
-	$LogoW:$w10 * $WM+ $WA;
+	$LogoW: $w10 * $WM+ $WA;
 	//  menubtn寬度 = 父框架的寬度(100) - logo寬度(85)
-    $MBW: $w10 * 10 - $LogoW;
+	$MBW: $w10 * 10 - $LogoW;
 
 	// 連動 計算寬度 logo 與 menubtn
 
 	// 呼叫 id (標籤 或 id class)
-	#logo{
+	#logo {
 		// 寬度
 		width: $LogoW;
 	}
-	#menubtn{
+	#menubtn {
 		// 寬度
 		width: $MBW;
 	}
@@ -56,8 +56,8 @@ $w10: 10vw;
 
 // 開啟隱藏物件
 @mixin OB {
-    // 顯示方式：區塊
-    display: block;
+	// 顯示方式：區塊
+	display: block;
 }
 
 // 清除浮動 float
