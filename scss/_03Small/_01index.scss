@@ -47,6 +47,9 @@ header {
 			// 浮點對齊法：靠左對齊 float:left
 			float: left;
 		}
+		.clear {
+			@include ClearFloat;
+		}
 	}
 }
 

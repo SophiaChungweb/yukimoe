@@ -3,52 +3,53 @@
 因為 媒體判斷的順序是由 小尺寸語法 至 大尺寸 ，故 大尺寸沒有下達任何語法時，會直接直判讀至小尺寸
 */
 header {
-    background-color: yellowgreen;
-    width: $w10 * 10;
-    nav {
-            // 彈性佈局 flex；對齊物件的父框架
-            // 顯示方式：彈性佈局
-            display: flex;
-            // 換行
-            flex-wrap: wrap;
+	background-color: yellowgreen;
+	width: $w10 * 10;
+	nav {
+		// 彈性佈局 flex；對齊物件的父框架
+		// 顯示方式：彈性佈局
+		display: flex;
+		// 換行
+		flex-wrap: wrap;
+		background-color: yellowgreen;
 
-            // logo 寬度 + icon 寬度 = 總寬度 100vw (100%)
-        
-        #logo{
-            width: $w10 * 7;
-        }
-        #iconbox {
-            // 開啟隱藏物件
-            @include OB;
-            width: $w10 * 3;
-            // 隱藏項目符號
-            @include DNli;
-            // 彈性佈局
-            display: flex;
-        }
-        .btnbox {
-            // 開啟隱藏物件
-            @include OB;
-            width: $w10 * 10;
-            // 彈性佈局
-            display: flex;
-            // 隱藏項目符號
-            @include DNli;
+		// logo 寬度 + icon 寬度 = 總寬度 100vw (100%)
 
-            // 隱藏 第二層選單
-            ul{
-                @include DN;
-            }
-        }
-        #menubtn{
-            @include DN;
-        }
-    }
+		#logo {
+			width: $w10 * 7;
+		}
+		#iconbox {
+			// 開啟隱藏物件
+			@include OB;
+			width: $w10 * 3;
+			// 隱藏項目符號
+			@include DNli;
+			// 彈性佈局
+			display: flex;
+		}
+		.btnbox {
+			// 開啟隱藏物件
+			@include OB;
+			width: $w10 * 10;
+			// 彈性佈局
+			display: flex;
+			// 隱藏項目符號
+			@include DNli;
+
+			// 隱藏 第二層選單
+			ul {
+				@include DN;
+			}
+		}
+		#menubtn {
+			@include DN;
+		}
+	}
 }
 
 footer {
-    address {
-        // 呼叫 混合函式
-        @include DN;
-    }
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
 }

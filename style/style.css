@@ -52,6 +52,9 @@ img {
   header nav #menubtn {
     float: left;
   }
+  header nav .clear {
+    clear: both;
+  }
   footer address {
     display: none;
   }
@@ -93,6 +96,9 @@ img {
   }
   header nav #menubtn {
     float: left;
+  }
+  header nav .clear {
+    clear: both;
   }
   footer address {
     display: none;
@@ -153,6 +159,7 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    background-color: yellowgreen;
   }
   header nav #logo {
     width: 70vw;
