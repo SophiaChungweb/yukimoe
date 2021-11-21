@@ -55,6 +55,27 @@ img {
   header nav .clear {
     clear: both;
   }
+  footer {
+    margin-top: 2rem;
+  }
+  footer hr {
+    margin-bottom: 2rem;
+  }
+  footer nav {
+    margin-bottom: 2rem;
+  }
+  footer nav ul {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    background-color: thistle;
+  }
+  footer p {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
   footer address {
     display: none;
   }
