@@ -82,17 +82,21 @@ img {
   #main {
     background-color: burlywood;
   }
+  #main #banner {
+    width: 100vw;
+    overflow: hidden;
+  }
   #main #banner .leftbtn,
   #main #banner .rightbtn {
     display: none;
   }
   #main #banner #imgbox {
-    width: 100vw;
+    width: 300vw;
     list-style-type: none;
     background-color: cadetblue;
   }
   #main #banner #imgbox li {
-    width: 100vw;
+    width: 300vw;
     float: left;
     position: absolute;
   }
