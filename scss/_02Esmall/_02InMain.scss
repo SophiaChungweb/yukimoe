@@ -1,0 +1,22 @@
+#main{
+    background-color: burlywood;
+
+    #banner{
+        .leftbtn,
+        .rightbtn{
+            @include DN;
+        }
+
+        #imgbox{
+            width: $w10 * 10;
+            @include DNli;
+            background-color: cadetblue;
+            li{
+                width: $w10 * 10;
+                float: left;
+                // 定位點 相絕定位
+                position: absolute;
+            }
+        }
+    }
+}

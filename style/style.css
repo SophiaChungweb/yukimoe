@@ -79,6 +79,23 @@ img {
   footer address {
     display: none;
   }
+  #main {
+    background-color: burlywood;
+  }
+  #main #banner .leftbtn,
+  #main #banner .rightbtn {
+    display: none;
+  }
+  #main #banner #imgbox {
+    width: 100vw;
+    list-style-type: none;
+    background-color: cadetblue;
+  }
+  #main #banner #imgbox li {
+    width: 100vw;
+    float: left;
+    position: absolute;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -120,6 +137,27 @@ img {
   }
   header nav .clear {
     clear: both;
+  }
+  footer {
+    margin-top: 2rem;
+  }
+  footer hr {
+    margin-bottom: 2rem;
+  }
+  footer nav {
+    margin-bottom: 2rem;
+  }
+  footer nav ul {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    background-color: thistle;
+  }
+  footer p {
+    text-align: center;
+    margin-bottom: 0.7rem;
   }
   footer address {
     display: none;
