@@ -1,5 +1,5 @@
 #main {
-	background-color: burlywood;
+	background-color: rgb(222, 135, 218);
 
 	#banner {
 		width: $w10 * 10;
@@ -38,7 +38,7 @@
 			@include DNli;
 			// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
 			padding-bottom: 39vh;
-			background-color: cadetblue;
+			background-color: rgb(145, 95, 160);
 			li {
 				width: $w10 * 10;
 				float: left;

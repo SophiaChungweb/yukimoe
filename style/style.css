@@ -96,23 +96,24 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
     height: 12vh;
     text-align: center;
     line-height: 12vh;
-    font-size: 2rem;
+    font-size: 1.2rem;
     position: absolute;
     z-index: 15;
     top: 14vh;
+    border-radius: 15px;
   }
   #main #banner .leftbtn {
     left: 2.5vw;
-    background-color: chocolate;
+    background-color: rgba(255, 255, 255, 0.25);
   }
   #main #banner .rightbtn {
     right: 2.5vw;
-    background-color: crimson;
+    background-color: rgba(255, 255, 255, 0.25);
   }
   #main #banner #imgbox {
     width: 100vw;
     list-style-type: none;
-    padding-bottom: 40vh;
+    padding-bottom: 39vh;
     background-color: cadetblue;
   }
   #main #banner #imgbox li {
@@ -224,6 +225,82 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   footer address {
     display: none;
   }
+  #main {
+    background-color: #de87da;
+  }
+  #main #banner {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  #main #banner .btn {
+    width: 20px;
+    height: 12vh;
+    text-align: center;
+    line-height: 12vh;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 15;
+    top: 14vh;
+    border-radius: 15px;
+  }
+  #main #banner .leftbtn {
+    left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner .rightbtn {
+    right: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner #imgbox {
+    width: 100vw;
+    list-style-type: none;
+    padding-bottom: 39vh;
+    background-color: #915fa0;
+  }
+  #main #banner #imgbox li {
+    width: 100vw;
+    float: left;
+    position: absolute;
+    font-size: 72px;
+    text-align: center;
+    padding-bottom: 26vh;
+  }
+  #main #banner #imgbox .item01 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/005.jpg);
+  }
+  #main #banner #imgbox .Item02 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/004.jpg);
+  }
+  #main #banner #imgbox .Item03 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/003.jpg);
+  }
+  #main #banner #imgbox .Item04 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/002.jpg);
+  }
+  #main #banner #imgbox .Item05 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/001.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -262,6 +339,82 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   }
   footer address {
     display: none;
+  }
+  #main {
+    background-color: #87aade;
+  }
+  #main #banner {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  #main #banner .btn {
+    width: 20px;
+    height: 12vh;
+    text-align: center;
+    line-height: 12vh;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 15;
+    top: 14vh;
+    border-radius: 15px;
+  }
+  #main #banner .leftbtn {
+    left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner .rightbtn {
+    right: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner #imgbox {
+    width: 100vw;
+    list-style-type: none;
+    padding-bottom: 39vh;
+    background-color: #3e35bb;
+  }
+  #main #banner #imgbox li {
+    width: 100vw;
+    float: left;
+    position: absolute;
+    font-size: 72px;
+    text-align: center;
+    padding-bottom: 26vh;
+  }
+  #main #banner #imgbox .item01 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/005.jpg);
+  }
+  #main #banner #imgbox .Item02 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/004.jpg);
+  }
+  #main #banner #imgbox .Item03 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/003.jpg);
+  }
+  #main #banner #imgbox .Item04 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/002.jpg);
+  }
+  #main #banner #imgbox .Item05 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/001.jpg);
   }
 }
 
