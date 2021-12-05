@@ -54,11 +54,14 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
     display: none;
   }
   header nav #menubtn {
+    height: 60px;
     float: left;
-  }
-  header nav #menubtn img {
-    width: 50px;
-    height: 50px;
+    background-color: aquamarine;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../../images/icon/menubtn.png);
   }
   header nav .clear {
     clear: both;
