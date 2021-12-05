@@ -7,6 +7,10 @@
 		overflow: hidden;
 		// 定位點：相對定位
 		position: relative;
+
+		$imgpadding: 385px;
+		// 父框架的padding 335 px - 子框架的padding 250 px = 相差值 $Differ 85
+		$Differ: 90px;
 		.btn {
 			width: 20px;
 			height: 95px;
@@ -20,7 +24,7 @@
 			// 移動階層(圖層)
 			z-index: 15;
 			// 左右按鈕，物件往下推算高度；(物件的父框架的高 / 2)-(按鈕高度 / 2)+單位
-			top: (335 / 2) - (95 / 2) + px;
+			top: (335 / 2) - (95px / 2);
 			@include Rounded(15);
 		}
 		.leftbtn {
@@ -35,10 +39,11 @@
 		}
 
 		#imgbox {
+			
 			width: $w10 * 10;
 			@include DNli;
 			// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
-			padding-bottom: 335px;
+			padding-bottom: $imgpadding;
 			background-color: cadetblue;
 			li {
 				width: $w10 * 10;
@@ -51,7 +56,8 @@
 				font-size: 72px;
 				text-align: center;
 				// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh(會隨著裝置而改變) 800px * 0.26 = 208 px；固定值 px
-				padding-bottom: 250px;
+				// 子框架的padding = 父框架的padding - 相差值 $Differ
+				padding-bottom: $imgpadding - $Differ;
 			}
 
 			.item01 {

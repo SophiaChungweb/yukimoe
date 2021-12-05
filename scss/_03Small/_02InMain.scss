@@ -7,19 +7,24 @@
 		overflow: hidden;
 		// 定位點：相對定位
 		position: relative;
+
+		$imgpadding: 385px;
+		// 父框架的padding 335 px - 子框架的padding 250 px = 相差值 $Differ 85
+		$Differ: 90px;
 		.btn {
 			width: 20px;
-			height: 6vh * 2;
+			height: 95px;
 			// 水平置中
 			text-align: center;
 			// 垂直置中 高度 = 行距
-			line-height: 6vh * 2;
+			line-height: 95px;
 			font-size: $Trem * 1.2;
 			// 定位點
 			position: absolute;
 			// 移動階層(圖層)
 			z-index: 15;
-			top: 20vh - 6vh;
+			// 左右按鈕，物件往下推算高度；(物件的父框架的高 / 2)-(按鈕高度 / 2)+單位
+			top: (335 / 2) - (95px / 2);
 			@include Rounded(15);
 		}
 		.leftbtn {
@@ -37,7 +42,7 @@
 			width: $w10 * 10;
 			@include DNli;
 			// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
-			padding-bottom: 40vh;
+			padding-bottom: $imgpadding;
 			background-color: rgb(145, 95, 160);
 			li {
 				width: $w10 * 10;
@@ -50,7 +55,7 @@
 				font-size: 72px;
 				text-align: center;
 				// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh，和上面可相同，也可以用比例方式算
-				padding-bottom: 26vh;
+				padding-bottom: $imgpadding - $Differ;
 			}
 
 			.item01 {
