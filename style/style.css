@@ -179,7 +179,9 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   }
   #main > #Limited > .lcommodity > #titlebox {
     list-style-type: none;
-    background-color: white;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     width: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -189,13 +191,26 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   }
   #main > #Limited > .lcommodity > #titlebox > .title {
     width: 70%;
-    background-color: aquamarine;
+    font-size: 1.7rem;
   }
   #main > #Limited > .lcommodity > #titlebox > .number {
     width: 30%;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+  #main > #Limited > .lcommodity > #titlebox > .number padding {
+    top: 0.6rem;
   }
   #main > #Limited > .lcommodity > #titlebox > .text {
     width: 100%;
+    text-align: right;
+  }
+  #main > #Limited > .lcommodity > .images {
+    width: 95%;
+    height: 230px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: yellowgreen;
   }
   #main > #Limited > .lcommodity > .lname > ul > li {
     background-color: yellow;
