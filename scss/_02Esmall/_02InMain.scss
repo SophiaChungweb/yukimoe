@@ -81,6 +81,12 @@
 	}
 
 	> #Limited {
+		// 計算式
+		$tw: $w1p * 7;
+		$nw: $w1p * 10 - $tw;
+
+		$TFS: $Trem * 1.7;
+		$NFS: $Trem * 1.1;
 		> h1 {
 			// 文字尺寸
 			font-size: $Trem * 2 + $Trem * 0.3;
@@ -122,12 +128,6 @@
 				// 換行
 				flex-wrap: wrap;
 
-				// 計算式
-				$tw: $w1p * 7;
-				$nw: $w1p * 10 - $tw;
-
-				$TFS: $Trem * 1.7;
-				$NFS: $Trem * 1.1;
 				> .title {
 					width: $tw;
 					font-size: $TFS;
@@ -161,12 +161,25 @@
 			}
 
 			> .lname {
-				> ul {
-					> li {
-						background-color: yellow;
-						// 隱藏項目符號
-						list-style-type: none;
-					}
+				width: $w1p * 9;
+				// 彈性佈局 橫向排版
+				display: flex;
+				// 外間距
+				margin: {
+					bottom: 15px;
+				}
+				background-color: yellow;
+
+				> h3 {
+					width: $tw + 10;
+					// 文字尺寸
+					font-size: $Trem * 1.4;
+				}
+
+				> li {
+					width: $nw - 10;
+					// 隱藏項目符號
+					list-style-type: none;
 				}
 			}
 		}

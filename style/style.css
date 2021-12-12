@@ -212,8 +212,20 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
     border-radius: 15px;
     background-color: yellowgreen;
   }
-  #main > #Limited > .lcommodity > .lname > ul > li {
+  #main > #Limited > .lcommodity > .lname {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
     background-color: yellow;
+  }
+  #main > #Limited > .lcommodity > .lname > h3 {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+  #main > #Limited > .lcommodity > .lname > li {
+    width: 20%;
     list-style-type: none;
   }
 }
