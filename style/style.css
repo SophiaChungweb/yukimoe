@@ -175,7 +175,7 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   #main > #Limited > .lcommodity {
     width: 80%;
     margin-bottom: 20px;
-    background-color: #8f5c5c;
+    background-color: #d6d5d5;
   }
   #main > #Limited > .lcommodity > #titlebox {
     list-style-type: none;
@@ -227,6 +227,43 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
   #main > #Limited > .lcommodity > .lname > li {
     width: 20%;
     list-style-type: none;
+  }
+  #main > #Limited > .lcommodity > .brief {
+    width: 85%;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  #main > #Limited > .lcommodity > #pricebox {
+    width: 90%;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 10px;
+  }
+  #main > #Limited > .lcommodity > #pricebox > .originalprice {
+    width: 35%;
+    font-size: 0.9rem;
+    padding-top: 0.3rem;
+  }
+  #main > #Limited > .lcommodity > #pricebox > .originalprice > span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: blue;
+  }
+  #main > #Limited > .lcommodity > #pricebox > .bargainprice {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  #main > #Limited > .lcommodity > #pricebox > .bargainprice > span {
+    font-size: 1.7rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: brown;
+    font-weight: 600;
+  }
+  #main > #Limited > .lcommodity > #pricebox > .car {
+    width: 20%;
   }
 }
 
