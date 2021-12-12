@@ -92,5 +92,12 @@
 				bottom: 15px;
 			}
 		}
+
+		> .lcommodity {
+			// 寬度
+			width: $w10 * 8;
+			// 背景顏色
+			background-color: white;
+		}
 	}
 }
