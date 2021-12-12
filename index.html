@@ -56,7 +56,7 @@
     <article id="main">
         <!-- 廣告區塊 div 命名 輪播功能用 javascript 命名建議用 ID選擇器；css3輪播功能 命名 ID選擇器或是 類別選擇器(class) -->
         <div id="banner">
-            <div class="btn leftbtn"><</div>
+            <div class="btn leftbtn"> ＜ </div>
             <ul id="imgbox">
                 <li class="item01">1</li>
                 <li class="item02">2</li>
@@ -76,14 +76,20 @@
             <h1>限量商品</h1>
             <!-- 區段 section -->
             <section class="lcommodity">
-                <p class="images">p_1</p>
-                <p class="lname">
+                <ul id="titlebox">
+                    <li class="title">限量特賣</li>
+                    <!-- 行內標籤 不換行 span -->
+                    <li class="number">庫存<span>10</span></li>
+                    <li class="text">數量有限，售完為止</li>
+                </ul>
+                <div class="images">商品圖片p_1</div>
+                <div class="lname">
                     <h3>墨魚乳酪球</h3>
                     <ul>
                         <li class="love">我的最愛</li>
                         <li class="car">購物車</li>
                     </ul>
-                </p>
+                </div>
                   <!--螢光標記 mark -->
                 <p class="brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13個字數</mark> )，會利用…設計</p>
                 <ul>

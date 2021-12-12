@@ -95,9 +95,51 @@
 
 		> .lcommodity {
 			// 寬度
-			width: $w10 * 8;
+			width: $w1p * 8;
+
+			// 外間距
+			margin: {
+				bottom: 20px;
+			}
 			// 背景顏色
-			background-color: white;
+			background-color: rgb(143, 92, 92);
+
+			> #titlebox {
+				// 項目隱藏符號
+				list-style-type: none;
+				// 背景顏色
+				background-color: rgb(255, 255, 255);
+				// 寬度
+				width: $w1p * 8.5;
+				// 彈性佈局
+				display: flex;
+				// 換行
+				flex-wrap: wrap;
+
+				// 計算式
+				$tw: $w1p * 7;
+				$nw: $w1p * 10 - $tw;
+				> .title {
+					width: $tw;
+					background-color: aquamarine;
+				}
+				> .number {
+					width: $nw;
+				}
+				> .text {
+					width: 100%;
+				}
+			}
+
+			> .lname {
+				> ul {
+					> li {
+						background-color: yellow;
+						// 隱藏項目符號
+						list-style-type: none;
+					}
+				}
+			}
 		}
 	}
 }

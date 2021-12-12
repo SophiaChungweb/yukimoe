@@ -173,8 +173,33 @@ em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
     padding-bottom: 15px;
   }
   #main > #Limited > .lcommodity {
-    width: 80vw;
+    width: 80%;
+    margin-bottom: 20px;
+    background-color: #8f5c5c;
+  }
+  #main > #Limited > .lcommodity > #titlebox {
+    list-style-type: none;
     background-color: white;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main > #Limited > .lcommodity > #titlebox > .title {
+    width: 70%;
+    background-color: aquamarine;
+  }
+  #main > #Limited > .lcommodity > #titlebox > .number {
+    width: 30%;
+  }
+  #main > #Limited > .lcommodity > #titlebox > .text {
+    width: 100%;
+  }
+  #main > #Limited > .lcommodity > .lname > ul > li {
+    background-color: yellow;
+    list-style-type: none;
   }
 }
 

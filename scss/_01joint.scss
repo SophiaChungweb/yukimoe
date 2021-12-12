@@ -14,7 +14,10 @@ img {
 }
 
 // 變數區
+// vw 在父框架與子框架之間，會呈現誤差值；所以建議單位用 %
 $w10: 10vw;
+// 百分比單位
+$w1p: 10%;
 /*
 文字尺寸 單位 px (固定值) em (百分比，會疊加父框架設定的值) rem (百分比，不會疊加父框架設定的值) 
 em 基礎為 1em = 16px ； rem 基礎為 1 rem = 16px
@@ -77,24 +80,24 @@ $Trem: 1rem;
 }
 
 // 商品 廣告背景圖片語法
-@mixin BPhoto ( $PosiTion, $Size, $Data, $Image ) {
+@mixin BPhoto ($PosiTion, $Size, $Data, $Image) {
 	// 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
 	// 問題：路徑無法直接讀取變數名稱
 	// 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
 	width: $w10 * 10;
 
-				// 不重覆
-				background-repeat: no-repeat;
-				// 背景圖片 置中對齊
-				background-position: $PosiTion;
-				// 背景圖片 尺寸
-				background-size: $Size;
-				// 背景圖片
-				background-image: url(../../images/#{$Data}/#{$Image});
+	// 不重覆
+	background-repeat: no-repeat;
+	// 背景圖片 置中對齊
+	background-position: $PosiTion;
+	// 背景圖片 尺寸
+	background-size: $Size;
+	// 背景圖片
+	background-image: url(../../images/#{$Data}/#{$Image});
 }
 
 // 手機版選單
-@mixin PhoneMenu ( $PosiTion, $Size, $Data, $Image ) {
+@mixin PhoneMenu ($PosiTion, $Size, $Data, $Image) {
 	// 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
 	// 問題：路徑無法直接讀取變數名稱
 	// 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
@@ -109,7 +112,7 @@ $Trem: 1rem;
 }
 
 // 圓角矩形
-@mixin Rounded($Num){
+@mixin Rounded($Num) {
 	// 邊框角度設定，建議單位為 像素
 	border-radius: $Num + px;
 }
