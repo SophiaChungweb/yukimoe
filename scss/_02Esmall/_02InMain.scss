@@ -1,3 +1,4 @@
+// 子元素選擇器(有指向性)；例如 header > nav > #iconbox > li
 #main {
 	background-color: burlywood;
 
@@ -39,7 +40,6 @@
 		}
 
 		#imgbox {
-			
 			width: $w10 * 10;
 			@include DNli;
 			// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
@@ -63,19 +63,33 @@
 			.item01 {
 				@include BPhoto(center, cover, Banner, "005.jpg");
 			}
-			.Item02{
+			.Item02 {
 				// 英文字在數字前，數字被判定為「文字」；數字在英文字或底線( _ )前，數字被判為數字，「0」為開頭，scss會自動刪除
 				// 數字要變為文字，需轉換為「字串」，字串用雙引號包覆
 				@include BPhoto(center, cover, Banner, "004.jpg");
 			}
-			.Item03{
+			.Item03 {
 				@include BPhoto(center, cover, Banner, "003.jpg");
 			}
-			.Item04{
+			.Item04 {
 				@include BPhoto(center, cover, Banner, "002.jpg");
 			}
-			.Item05{
+			.Item05 {
 				@include BPhoto(center, cover, Banner, "001.jpg");
+			}
+		}
+	}
+
+	> #Limited {
+		> h1 {
+			// 文字尺寸
+			font-size: $Trem * 2 + $Trem * 0.3;
+			// 標題置中
+			text-align: center;
+			// 內間距
+			padding: {
+				top: 15px;
+				bottom: 15px;
 			}
 		}
 	}
