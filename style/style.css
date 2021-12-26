@@ -85,6 +85,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     clear: both;
   }
   header > #menunav {
+    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -126,11 +127,12 @@ $NFS: $Trem * 1.1($nfsfsm)
   header > #menunav > ul > .item {
     width: 45%;
     height: 70px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: sandybrown;
   }
   header > #menunav > ul > .itemtwo {
-    width: 30.33333%;
+    width: 28.33333%;
     height: 90px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -249,23 +251,28 @@ $NFS: $Trem * 1.1($nfsfsm)
     padding-bottom: 15px;
   }
   #main > #Limited > .lcommodity {
-    width: 90vw;
-    margin-bottom: 20px;
-    background-color: white;
-    -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
-            box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
-  }
-  #main > #Limited > .lcommodity > #titlebox {
-    list-style-type: none;
-    letter-spacing: 2px;
-    padding-top: 15px;
-    padding-bottom: 10px;
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 20px;
+    background-color: white;
+    -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+  }
+  #main > #Limited > .lcommodity > #titlebox {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style-type: none;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
   #main > #Limited > .lcommodity > #titlebox > .title {
     width: 70%;
@@ -372,7 +379,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     padding-bottom: 15px;
   }
   #main > #share > article > .scommodity {
-    width: 90vw;
+    width: 90%;
     margin-bottom: 20px;
     background-color: white;
     -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
@@ -497,7 +504,6 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: -ms-flexbox;
     display: flex;
     list-style-type: none;
-    background-color: thistle;
   }
   footer p {
     text-align: center;
@@ -585,15 +591,21 @@ $NFS: $Trem * 1.1($nfsfsm)
   }
   #main > #Limited {
     background-image: url(../../images/BG/002.jpg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #main > #Limited > h1 {
+    width: 90%;
     font-size: 2.3rem;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
   }
   #main > #Limited > .lcommodity {
-    width: 90vw;
+    width: 45%;
     margin-bottom: 20px;
     background-color: white;
     -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
@@ -628,7 +640,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     text-align: right;
   }
   #main > #Limited > .lcommodity > .images {
-    width: 92%;
+    width: 85%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
@@ -716,7 +728,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     padding-bottom: 15px;
   }
   #main > #share > article > .scommodity {
-    width: 90vw;
+    width: 45%;
     margin-bottom: 20px;
     background-color: white;
     -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
@@ -726,7 +738,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     height: 20px;
   }
   #main > #share > article > .scommodity > .images {
-    width: 92%;
+    width: 85%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
@@ -860,6 +872,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: none;
   }
   #main {
+    width: 100vw;
     background-color: burlywood;
   }
   #main #banner {
@@ -944,7 +957,15 @@ $NFS: $Trem * 1.1($nfsfsm)
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  #main > #Limited > .lcommodity {
+  #main > #Limited > article {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main > #Limited > article > .lcommodity {
     width: 30.33333%;
     margin-bottom: 20px;
     margin-left: 1.5%;
@@ -953,7 +974,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
   }
-  #main > #Limited > .lcommodity > #titlebox {
+  #main > #Limited > article > .lcommodity > #titlebox {
     list-style-type: none;
     letter-spacing: 2px;
     padding-top: 15px;
@@ -965,53 +986,53 @@ $NFS: $Trem * 1.1($nfsfsm)
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #main > #Limited > .lcommodity > #titlebox > .title {
+  #main > #Limited > article > .lcommodity > #titlebox > .title {
     width: 70%;
     font-size: 1.7rem;
   }
-  #main > #Limited > .lcommodity > #titlebox > .number {
+  #main > #Limited > article > .lcommodity > #titlebox > .number {
     width: 30%;
     font-size: 1.1rem;
     text-align: right;
   }
-  #main > #Limited > .lcommodity > #titlebox > .number padding {
+  #main > #Limited > article > .lcommodity > #titlebox > .number padding {
     top: 0.6rem;
   }
-  #main > #Limited > .lcommodity > #titlebox > .text {
+  #main > #Limited > article > .lcommodity > #titlebox > .text {
     width: 100%;
     text-align: right;
   }
-  #main > #Limited > .lcommodity > .images {
-    width: 85%;
+  #main > #Limited > article > .lcommodity > .images {
+    width: 92%;
     height: 180px;
     margin-bottom: 20px;
     border-radius: 15px;
   }
-  #main > #Limited > .lcommodity > .images > a > img {
+  #main > #Limited > article > .lcommodity > .images > a > img {
     border: 1.5px solid #440707;
     border-radius: 15px;
   }
-  #main > #Limited > .lcommodity > .lname {
+  #main > #Limited > article > .lcommodity > .lname {
     width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 10px;
   }
-  #main > #Limited > .lcommodity > .lname > h3 {
+  #main > #Limited > article > .lcommodity > .lname > h3 {
     width: 80%;
     font-size: 1.4rem;
   }
-  #main > #Limited > .lcommodity > .lname > li {
+  #main > #Limited > article > .lcommodity > .lname > li {
     width: 20%;
     list-style-type: none;
   }
-  #main > #Limited > .lcommodity > .brief {
+  #main > #Limited > article > .lcommodity > .brief {
     width: 85%;
     text-align: justify;
     margin-bottom: 10px;
   }
-  #main > #Limited > .lcommodity > #pricebox {
+  #main > #Limited > article > .lcommodity > #pricebox {
     width: 90%;
     list-style-type: none;
     display: -webkit-box;
@@ -1019,37 +1040,29 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: flex;
     padding-bottom: 10px;
   }
-  #main > #Limited > .lcommodity > #pricebox > .originalprice {
+  #main > #Limited > article > .lcommodity > #pricebox > .originalprice {
     width: 35%;
     font-size: 0.9rem;
     padding-top: 0.2rem;
   }
-  #main > #Limited > .lcommodity > #pricebox > .originalprice > span {
+  #main > #Limited > article > .lcommodity > #pricebox > .originalprice > span {
     padding-left: 5px;
     padding-right: 5px;
     color: blue;
   }
-  #main > #Limited > .lcommodity > #pricebox > .bargainprice {
+  #main > #Limited > article > .lcommodity > #pricebox > .bargainprice {
     width: 40%;
     font-size: 1.2rem;
   }
-  #main > #Limited > .lcommodity > #pricebox > .bargainprice > span {
+  #main > #Limited > article > .lcommodity > #pricebox > .bargainprice > span {
     font-size: 1.5rem;
     padding-left: 5px;
     padding-right: 5px;
     color: brown;
     font-weight: 600;
   }
-  #main > #Limited > .lcommodity > #pricebox > .car {
+  #main > #Limited > article > .lcommodity > #pricebox > .car {
     width: 20%;
-  }
-  #main > #Limited > article {
-    width: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   #main > #Limited > .more {
     width: 80%;
@@ -1079,8 +1092,10 @@ $NFS: $Trem * 1.1($nfsfsm)
     padding-bottom: 15px;
   }
   #main > #share > article > .scommodity {
-    width: 90vw;
+    width: 30.33333%;
     margin-bottom: 20px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     background-color: white;
     -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
@@ -1179,6 +1194,285 @@ $NFS: $Trem * 1.1($nfsfsm)
   }
   footer address {
     display: none;
+  }
+  #main {
+    width: 100vw;
+    background-color: burlywood;
+  }
+  #main #banner {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  #main #banner .btn {
+    width: 20px;
+    height: 95px;
+    text-align: center;
+    line-height: 95px;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 15;
+    top: 120px;
+    border-radius: 15px;
+  }
+  #main #banner .leftbtn {
+    left: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner .rightbtn {
+    right: 2.5vw;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  #main #banner #imgbox {
+    width: 100vw;
+    list-style-type: none;
+    padding-bottom: 385px;
+    background-color: cadetblue;
+  }
+  #main #banner #imgbox li {
+    width: 100vw;
+    float: left;
+    position: absolute;
+    font-size: 72px;
+    text-align: center;
+    padding-bottom: 295px;
+  }
+  #main #banner #imgbox .item01 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/005.jpg);
+  }
+  #main #banner #imgbox .Item02 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/004.jpg);
+  }
+  #main #banner #imgbox .Item03 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/003.jpg);
+  }
+  #main #banner #imgbox .Item04 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/002.jpg);
+  }
+  #main #banner #imgbox .Item05 {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/Banner/001.jpg);
+  }
+  #main > #Limited {
+    background-image: url(../../images/BG/002.jpg);
+  }
+  #main > #Limited > h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #main > #Limited > article {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main > #Limited > article > .lcommodity {
+    width: 24%;
+    margin-bottom: 20px;
+    background-color: #4b1515;
+    -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+  }
+  #main > #Limited > article > .lcommodity > #titlebox {
+    list-style-type: none;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main > #Limited > article > .lcommodity > #titlebox > .title {
+    width: 70%;
+    font-size: 1.7rem;
+  }
+  #main > #Limited > article > .lcommodity > #titlebox > .number {
+    width: 30%;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+  #main > #Limited > article > .lcommodity > #titlebox > .number padding {
+    top: 0.6rem;
+  }
+  #main > #Limited > article > .lcommodity > #titlebox > .text {
+    width: 100%;
+    text-align: right;
+  }
+  #main > #Limited > article > .lcommodity > .images {
+    width: 92%;
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+  #main > #Limited > article > .lcommodity > .images > a > img {
+    border: 1.5px solid #440707;
+    border-radius: 15px;
+  }
+  #main > #Limited > article > .lcommodity > .lname {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  #main > #Limited > article > .lcommodity > .lname > h3 {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+  #main > #Limited > article > .lcommodity > .lname > li {
+    width: 20%;
+    list-style-type: none;
+  }
+  #main > #Limited > article > .lcommodity > .brief {
+    width: 85%;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox {
+    width: 90%;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 10px;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox > .originalprice {
+    width: 35%;
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox > .originalprice > span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: blue;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox > .bargainprice {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox > .bargainprice > span {
+    font-size: 1.5rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: brown;
+    font-weight: 600;
+  }
+  #main > #Limited > article > .lcommodity > #pricebox > .car {
+    width: 20%;
+  }
+  #main > #Limited > .more {
+    width: 80%;
+    text-align: right;
+    list-style-type: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+  #main > #Limited > .more > a {
+    padding: 5px 30px;
+    display: inline-block;
+    background-color: #9b2727;
+    text-decoration: none;
+    color: white;
+    border: 1.5px solid #440707;
+    border-radius: 20px;
+  }
+  #main > #share {
+    background-image: url(../../images/BG/001.png);
+  }
+  #main > #share > h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #main > #share > article > .scommodity {
+    width: 22%;
+    margin-bottom: 20px;
+    margin-left: 5.66667%;
+    margin-right: 5.66667%;
+    background-color: white;
+    -webkit-box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+  }
+  #main > #share > article > .scommodity > .null {
+    height: 30px;
+  }
+  #main > #share > article > .scommodity > .images {
+    width: 85%;
+    height: 175px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+  #main > #share > article > .scommodity > .images > a > img {
+    border: 1.5px solid #440707;
+    border-radius: 15px;
+  }
+  #main > #share > article > .scommodity > .lname {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  #main > #share > article > .scommodity > .lname > h3 {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+  #main > #share > article > .scommodity > .lname > li {
+    width: 20%;
+    list-style-type: none;
+  }
+  #main > #share > article > .scommodity > .brief {
+    width: 85%;
+    text-align: justify;
+    padding-bottom: 15px;
+  }
+  #main > #share > .more {
+    width: 80%;
+    text-align: right;
+    list-style-type: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+  #main > #share > .more > a {
+    padding: 5px 30px;
+    display: inline-block;
+    background-color: #9b2727;
+    text-decoration: none;
+    color: white;
+    border: 1.5px solid #440707;
+    border-radius: 20px;
   }
 }
 

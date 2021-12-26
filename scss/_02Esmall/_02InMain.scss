@@ -107,7 +107,11 @@
 
     > .lcommodity {
       // 寬度
-      width: $w10 * 9;
+      width: $w1p * 9;
+      // 彈性佈局
+      display: flex;
+      // 換行
+      flex-wrap: wrap;
 
       // 外間距
       margin: {
@@ -119,6 +123,12 @@
       box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
 
       > #titlebox {
+        // 寬度
+        width: $w1p * 9;
+        // 彈性佈局
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
         // 項目隱藏符號
         list-style-type: none;
         // 字距
@@ -128,13 +138,6 @@
           top: 15px;
           bottom: 10px;
         }
-
-        // 寬度
-        width: $w1p * 9;
-        // 彈性佈局
-        display: flex;
-        // 換行
-        flex-wrap: wrap;
 
         > .title {
           width: $tw;
@@ -325,7 +328,7 @@
     > article {
       > .scommodity {
         // 寬度
-        width: $w10 * 9;
+        width: $w1p * 9;
 
         // 外間距
         margin: {

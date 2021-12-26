@@ -92,7 +92,14 @@
     $TFS: $Trem * 1.7;
     $NFS: $Trem * 1.1;
     background-image: url(../../images/BG/002.jpg);
+
+    // 彈性佈局
+    display: flex;
+    // 換行
+    flex-wrap: wrap;
+
     > h1 {
+      width: $w1p * 9;
       // 文字尺寸
       font-size: $Trem * 2 + $Trem * 0.3;
       // 標題置中
@@ -106,7 +113,7 @@
 
     > .lcommodity {
       // 寬度
-      width: $w10 * 9;
+      width: $w1p * 4.5;
 
       // 外間距
       margin: {
@@ -155,7 +162,7 @@
       }
       > .images {
         // 寬度
-        width: $w1p * 9.2;
+        width: $w1p * 8.5;
         // 不設高度，用圖片去撐高
         margin: {
           bottom: 10px;
@@ -324,7 +331,7 @@
     > article {
       > .scommodity {
         // 寬度
-        width: $w10 * 9;
+        width: $w1p * 4.5;
 
         // 外間距
         margin: {
@@ -341,7 +348,7 @@
         }
         > .images {
           // 寬度
-          width: $w1p * 9.2;
+          width: $w1p * 8.5;
           // 不設高度，用圖片去撐高
           margin: {
             bottom: 10px;
