@@ -6,11 +6,11 @@
 // 目前使用單位(數值)是百分比(%)：網頁的固定單位--像素 px
 
 header {
-    // 寬度 100%;
-    width: $w10 * 10;
-    background-color: violet;
-    nav {
-        /*
+  // 寬度 100%;
+  width: $w10 * 10;
+  background-color: violet;
+  > #mainvav {
+    /*
         浮動對齊的問題float
         1、#logo與.btnbox物件的父框架nav.無寬度
         2、nav的父框架 header ，高度消失(展開)
@@ -19,40 +19,40 @@ header {
         2、清除浮動狀態，由nav設定
         3、利用圖片高度撐開父框架的高
         */
-        width: $w10 * 10;
-        // 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
-        background-color: rgb(153, 65, 204);
-        // 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
+    width: $w10 * 10;
+    // 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
+    background-color: rgb(153, 65, 204);
+    // 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
 
-        // 靠左排列(與menubtn同一行)
-        #logo{
-            // 寬度 向下相容；讀取 03small 設定值
-            float: left;
-            background-color: pink;
-        }
-        #iconbox {
-            // 呼叫 混合函式
-            @include DN;
-        }
-        .btnbox {
-            // 呼叫 混合函式
-            @include DN;
-        }
-        // 靠左排列(與logo同一行)
-        #menubtn{
-            // 寬度 向下相容；讀取 03small 設定值
-            // 浮點對齊法：靠左對齊 float:left
-            float: left;
-        }
-        .clear{
-            @include ClearFloat;
-        }
+    // 靠左排列(與menubtn同一行)
+    #logo {
+      // 寬度 向下相容；讀取 03small 設定值
+      float: left;
+      background-color: pink;
     }
+    #iconbox {
+      // 呼叫 混合函式
+      @include DN;
+    }
+    .btnbox {
+      // 呼叫 混合函式
+      @include DN;
+    }
+    // 靠左排列(與logo同一行)
+    #menubtn {
+      // 寬度 向下相容；讀取 03small 設定值
+      // 浮點對齊法：靠左對齊 float:left
+      float: left;
+    }
+    .clear {
+      @include ClearFloat;
+    }
+  }
 }
 
 footer {
-    address {
-        // 呼叫 混合函式
-        @include DN;
-    }
+  address {
+    // 呼叫 混合函式
+    @include DN;
+  }
 }
