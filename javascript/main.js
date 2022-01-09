@@ -3,20 +3,23 @@
 
 testcode();
 
-// 日期函數 Date 產生新的 Date
-var year = new Date().getFullYear();
-/*
-上面顯示的值是下面二個程式碼的縮寫，兩者是一樣的
-var now = new Date();
-var year = now.getFullYear();
-*/
+timeyear();
 
+function timeyear(){
+    // 日期函數 Date 產生新的 Date
+    var year = new Date().getFullYear();
+    /*
+    上面顯示的值是下面二個程式碼的縮寫，兩者是一樣的
+    var now = new Date();
+    var year = now.getFullYear();
+    */
 
-// 年份變數
-// var year = "2022";
-// 由html顯示資料
-document.getElementById('year').textContent = year;
+    // 年份變數
+    // var year = "2022";
+    // 由html顯示資料
+    document.getElementById('year').textContent = year;
 
+};
 
 
 // 設計 方法 function name(參數或空白){程式}
@@ -56,4 +59,16 @@ function testcode() {
     else
         console.log("number < num 不成立");
 
+    // 多條件判斷式 if(條件){程式} else if(條件二) {程式}else{程式}
+    // 全域變數
+    let num_one = 1;
+    let num_two = 1;
+    // ==等於 (比較)
+    if ( num_one == num_two) {
+        console.log("兩個變數相等")
+    } else if ( num_two > num_one) {
+        console.log(num_two + " 大於 " + num_one);
+    } else {
+        console.log("不成立");
+    };
 }
