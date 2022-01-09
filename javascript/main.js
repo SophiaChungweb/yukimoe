@@ -16,3 +16,8 @@ ONE = "01";
 console.log(one);
 console.log(ONE);
 console.log("02");
+
+// 年份變數
+var year = "2022";
+// 由html顯示資料
+document.getElementById('year').textContent = year;
