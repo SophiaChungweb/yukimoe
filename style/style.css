@@ -830,6 +830,10 @@ $NFS: $Trem * 1.1($nfsfsm)
   header > #mainvav .clear {
     clear: both;
   }
+  footer div {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
   footer address {
     display: none;
   }
@@ -876,6 +880,10 @@ $NFS: $Trem * 1.1($nfsfsm)
   }
   header > #mainvav #menubtn {
     display: none;
+  }
+  footer div {
+    text-align: center;
+    margin-bottom: 0.7rem;
   }
   footer address {
     display: none;
@@ -1202,6 +1210,10 @@ $NFS: $Trem * 1.1($nfsfsm)
   header > #mainvav #menubtn {
     display: none;
   }
+  footer div {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
   footer address {
     display: none;
   }
@@ -1502,3 +1514,4 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: none;
   }
 }
+/*# sourceMappingURL=style.css.map */
