@@ -1217,9 +1217,6 @@ $NFS: $Trem * 1.1($nfsfsm)
   footer address {
     display: none;
   }
-  #main {
-    background-color: burlywood;
-  }
   #main #banner {
     width: 100vw;
     overflow: hidden;
@@ -1301,7 +1298,6 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: 20px;
   }
   #main > #Limited > h1 {
     width: 90%;

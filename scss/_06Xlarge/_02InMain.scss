@@ -1,6 +1,4 @@
 #main {
-	background-color: burlywood;
-
 	#banner {
 		width: $w10 * 10;
 		// 溢位設定，將超出的可視範圍給隱藏
@@ -97,9 +95,6 @@
 		display: flex;
 		// 換行
 		flex-wrap: wrap;
-
-		// 右間距
-		margin-right: 20px;
 
 		> h1 {
 			width: $w1p * 9;

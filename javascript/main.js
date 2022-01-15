@@ -106,24 +106,24 @@ function var_letcode() {
 }
 
 // 迴圈 for(宣告變數啟始值；條件；執行後增加或減少的次數){程式}
-let i;
-for ( i = 0; i <= 10; i = i + 1) {
-    console.log(i);
-}
+// let i;
+// for ( i = 0; i <= 10; i = i + 1) {
+//     console.log(i);
+// }
 
 // 迴圈  while (條件) {程式} 與 for 的差別，在於無法指定執行圈數
 whilecode ();
 
 function whilecode () {
     // 總數
-    let number = 200;
+    let number = 100;
 
     // 亂數 (系統產生介於 0 ~ 1 之間)，將小數變為整數 ( 數值要介於 0 ~  含30 ，需乘以 31)，設定為無條件捨去法
     
     let attack;
     let count = 1;
 
-    while (number > 0) {
+    while (number  > 0) {
         console.log("第" + count + "次");
         count = count + 1;
         
@@ -134,9 +134,17 @@ function whilecode () {
         number = number - attack;
 
         console.log("計算結果：" + number);
-    }
-        
+    }       
+   
+}
 
+// ifcode ();
+
+function ifcode () {
+    var n=0;
+    if(n<3){
+    n=n+1;
+    }
 }
 
 
