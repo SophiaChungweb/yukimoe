@@ -112,7 +112,7 @@ function var_letcode() {
 // }
 
 // 迴圈  while (條件) {程式} 與 for 的差別，在於無法指定執行圈數
-whilecode ();
+// whilecode ();
 
 function whilecode () {
     // 總數
@@ -177,3 +177,16 @@ function login() {
         console.log("帳號與密碼有誤！");
     }
 }
+
+arraycode();
+
+// 陣列 array 基本會配合 廻圈for 處理
+function arraycode() {
+    // 宣告陣列變數 給予值
+    let item = [101, '01', '項目'];
+    // 輸出資料 迴圈讀取 陣列 的索引碼，起始索引碼為 0 ，i可以為3也可以為<=2
+    for ( let i = 0; i <= 2; i++) {
+        console.log(item[i]);
+    }
+}
+
