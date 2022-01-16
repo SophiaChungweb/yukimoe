@@ -85,7 +85,6 @@ $NFS: $Trem * 1.1($nfsfsm)
     clear: both;
   }
   header > #menunav {
-    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -157,15 +156,15 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: flex;
     list-style-type: none;
   }
+  footer #phonenav {
+    text-decoration: none;
+  }
   footer div {
     text-align: center;
     margin-bottom: 0.7rem;
   }
   footer address {
     display: none;
-  }
-  #main {
-    background-color: burlywood;
   }
   #main #banner {
     width: 100vw;
@@ -511,9 +510,6 @@ $NFS: $Trem * 1.1($nfsfsm)
   }
   footer address {
     display: none;
-  }
-  #main {
-    background-color: burlywood;
   }
   #main #banner {
     width: 100vw;
@@ -888,13 +884,7 @@ $NFS: $Trem * 1.1($nfsfsm)
   footer address {
     display: none;
   }
-  #main {
-    background-color: burlywood;
-  }
   #main #banner {
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
     margin-top: 60px;
   }
   #main #banner .btn {

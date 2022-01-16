@@ -1,438 +1,436 @@
 // 子元素選擇器(有指向性)；例如 header > nav > #iconbox > li
 #main {
-	background-color: burlywood;
+  #banner {
+    width: $w10 * 10;
+    // 溢位設定，將超出的可視範圍給隱藏
+    overflow: hidden;
+    // 定位點：相對定位
+    position: relative;
 
-	#banner {
-		width: $w10 * 10;
-		// 溢位設定，將超出的可視範圍給隱藏
-		overflow: hidden;
-		// 定位點：相對定位
-		position: relative;
+    // 外間距 設定為 nav 的高度
+    margin: {
+      top: 60px;
+    }
 
-		// 外間距 設定為 nav 的高度
-		margin: {
-			top: 60px;
-		}
+    $imgpadding: 385px;
+    // 父框架的padding 335 px - 子框架的padding 250 px = 相差值 $Differ 85
+    $Differ: 90px;
+    .btn {
+      width: 20px;
+      height: 95px;
+      // 水平置中
+      text-align: center;
+      // 垂直置中 高度 = 行距
+      line-height: 95px;
+      font-size: $Trem * 1.2;
+      // 定位點
+      position: absolute;
+      // 移動階層(圖層)
+      z-index: 15;
+      // 左右按鈕，物件往下推算高度；(物件的父框架的高 / 2)-(按鈕高度 / 2)+單位
+      top: (335 / 2) - (95px / 2);
+      @include Rounded(15);
+    }
+    .leftbtn {
+      left: 2.5vw;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
 
-		$imgpadding: 385px;
-		// 父框架的padding 335 px - 子框架的padding 250 px = 相差值 $Differ 85
-		$Differ: 90px;
-		.btn {
-			width: 20px;
-			height: 95px;
-			// 水平置中
-			text-align: center;
-			// 垂直置中 高度 = 行距
-			line-height: 95px;
-			font-size: $Trem * 1.2;
-			// 定位點
-			position: absolute;
-			// 移動階層(圖層)
-			z-index: 15;
-			// 左右按鈕，物件往下推算高度；(物件的父框架的高 / 2)-(按鈕高度 / 2)+單位
-			top: (335 / 2) - (95px / 2);
-			@include Rounded(15);
-		}
-		.leftbtn {
-			left: 2.5vw;
-			background-color: rgba(255, 255, 255, 0.25);
-		}
+    .rightbtn {
+      // 方向 右邊為0(物件靠右對齊)；float 浮點對齊，配合 上下左右 方向推動
+      right: 2.5vw;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
 
-		.rightbtn {
-			// 方向 右邊為0(物件靠右對齊)；float 浮點對齊，配合 上下左右 方向推動
-			right: 2.5vw;
-			background-color: rgba(255, 255, 255, 0.25);
-		}
+    #imgbox {
+      width: $w10 * 10;
+      @include DNli;
+      // 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
+      padding-bottom: $imgpadding;
+      background-color: cadetblue;
+      li {
+        width: $w10 * 10;
+        float: left;
+        // 定位點 絕對定位：1、單獨呼叫時，原點(0,0)會位於畫面(可視範圍)的左上角
+        // 2、物件的父框架呼叫 相對定位(position: relative)時，功能設為「重新定位原點至父框架
+        position: absolute;
+        // 移動圖片位置；因為 不同手機會有不同的中心位罝，無法逐一計算，所以要利用 背景圖片 的方式修改
+        // margin-left: -235px;
+        font-size: 72px;
+        text-align: center;
+        // 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh(會隨著裝置而改變) 800px * 0.26 = 208 px；固定值 px
+        // 子框架的padding = 父框架的padding - 相差值 $Differ
+        padding-bottom: $imgpadding - $Differ;
+      }
 
-		#imgbox {
-			width: $w10 * 10;
-			@include DNli;
-			// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
-			padding-bottom: $imgpadding;
-			background-color: cadetblue;
-			li {
-				width: $w10 * 10;
-				float: left;
-				// 定位點 絕對定位：1、單獨呼叫時，原點(0,0)會位於畫面(可視範圍)的左上角
-				// 2、物件的父框架呼叫 相對定位(position: relative)時，功能設為「重新定位原點至父框架
-				position: absolute;
-				// 移動圖片位置；因為 不同手機會有不同的中心位罝，無法逐一計算，所以要利用 背景圖片 的方式修改
-				// margin-left: -235px;
-				font-size: 72px;
-				text-align: center;
-				// 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh(會隨著裝置而改變) 800px * 0.26 = 208 px；固定值 px
-				// 子框架的padding = 父框架的padding - 相差值 $Differ
-				padding-bottom: $imgpadding - $Differ;
-			}
+      .item01 {
+        @include BPhoto(center, cover, Banner, "005.jpg");
+      }
+      .Item02 {
+        // 英文字在數字前，數字被判定為「文字」；數字在英文字或底線( _ )前，數字被判為數字，「0」為開頭，scss會自動刪除
+        // 數字要變為文字，需轉換為「字串」，字串用雙引號包覆
+        @include BPhoto(center, cover, Banner, "004.jpg");
+      }
+      .Item03 {
+        @include BPhoto(center, cover, Banner, "003.jpg");
+      }
+      .Item04 {
+        @include BPhoto(center, cover, Banner, "002.jpg");
+      }
+      .Item05 {
+        @include BPhoto(center, cover, Banner, "001.jpg");
+      }
+    }
+  }
 
-			.item01 {
-				@include BPhoto(center, cover, Banner, "005.jpg");
-			}
-			.Item02 {
-				// 英文字在數字前，數字被判定為「文字」；數字在英文字或底線( _ )前，數字被判為數字，「0」為開頭，scss會自動刪除
-				// 數字要變為文字，需轉換為「字串」，字串用雙引號包覆
-				@include BPhoto(center, cover, Banner, "004.jpg");
-			}
-			.Item03 {
-				@include BPhoto(center, cover, Banner, "003.jpg");
-			}
-			.Item04 {
-				@include BPhoto(center, cover, Banner, "002.jpg");
-			}
-			.Item05 {
-				@include BPhoto(center, cover, Banner, "001.jpg");
-			}
-		}
-	}
+  > #Limited {
+    // 計算式
+    $tw: $w1p * 7;
+    $nw: $w1p * 10 - $tw;
 
-	> #Limited {
-		// 計算式
-		$tw: $w1p * 7;
-		$nw: $w1p * 10 - $tw;
+    $TFS: $Trem * 1.7;
+    $NFS: $Trem * 1.1;
+    background-image: url(../../images/BG/002.jpg);
 
-		$TFS: $Trem * 1.7;
-		$NFS: $Trem * 1.1;
-		background-image: url(../../images/BG/002.jpg);
+    > h1 {
+      // 文字尺寸
+      font-size: $Trem * 2 + $Trem * 0.3;
+      // 標題置中
+      text-align: center;
+      // 內間距
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      }
+    }
 
-		> h1 {
-			// 文字尺寸
-			font-size: $Trem * 2 + $Trem * 0.3;
-			// 標題置中
-			text-align: center;
-			// 內間距
-			padding: {
-				top: 15px;
-				bottom: 15px;
-			}
-		}
+    > .lcommodity {
+      // 寬度
+      width: $w1p * 9;
+      // 彈性佈局
+      display: flex;
+      // 換行
+      flex-wrap: wrap;
 
-		> .lcommodity {
-			// 寬度
-			width: $w1p * 9;
-			// 彈性佈局
-			display: flex;
-			// 換行
-			flex-wrap: wrap;
+      // 外間距
+      margin: {
+        bottom: 20px;
+      }
+      // 背景顏色
+      background-color: rgb(255, 255, 255);
+      // 陰影 x軸 y軸 模糊程度 顏色
+      box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
 
-			// 外間距
-			margin: {
-				bottom: 20px;
-			}
-			// 背景顏色
-			background-color: rgb(255, 255, 255);
-			// 陰影 x軸 y軸 模糊程度 顏色
-			box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+      > #titlebox {
+        // 寬度
+        width: $w1p * 9;
+        // 彈性佈局
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
+        // 項目隱藏符號
+        list-style-type: none;
+        // 字距
+        letter-spacing: 2px;
+        // 與外框的距離
+        padding: {
+          top: 15px;
+          bottom: 10px;
+        }
 
-			> #titlebox {
-				// 寬度
-				width: $w1p * 9;
-				// 彈性佈局
-				display: flex;
-				// 換行
-				flex-wrap: wrap;
-				// 項目隱藏符號
-				list-style-type: none;
-				// 字距
-				letter-spacing: 2px;
-				// 與外框的距離
-				padding: {
-					top: 15px;
-					bottom: 10px;
-				}
+        > .title {
+          width: $tw;
+          font-size: $TFS;
+        }
+        > .number {
+          width: $nw;
+          font-size: $NFS;
+          text-align: right;
+          // 計算 title 與 number 內間距的差
+          padding {
+            top: $TFS - $NFS;
+          }
+        }
+        > .text {
+          width: $w1p * 10;
+          text-align: right;
+        }
+      }
+      > .images {
+        // 寬度
+        width: $w1p * 9.2;
+        // 不設高度，用圖片去撐開
+        margin: {
+          bottom: 10px;
+        }
+        // 圓角矩形 邊框設定轉角的角度
+        border-radius: 15px;
 
-				> .title {
-					width: $tw;
-					font-size: $TFS;
-				}
-				> .number {
-					width: $nw;
-					font-size: $NFS;
-					text-align: right;
-					// 計算 title 與 number 內間距的差
-					padding {
-						top: $TFS - $NFS;
-					}
-				}
-				> .text {
-					width: $w1p * 10;
-					text-align: right;
-				}
-			}
-			> .images {
-				// 寬度
-				width: $w1p * 9.2;
-				// 不設高度，用圖片去撐開
-				margin: {
-					bottom: 10px;
-				}
-				// 圓角矩形 邊框設定轉角的角度
-				border-radius: 15px;
+        // background-color: yellowgreen;
 
-				// background-color: yellowgreen;
+        > a {
+          > img {
+            // 圖片邊框 線段的粗細 線段的樣式(實線) 顏色
+            border: 1.5px solid rgb(68, 7, 7);
+            border-radius: 15px;
+          }
+        }
+      }
 
-				> a {
-					> img {
-						// 圖片邊框 線段的粗細 線段的樣式(實線) 顏色
-						border: 1.5px solid rgb(68, 7, 7);
-						border-radius: 15px;
-					}
-				}
-			}
+      > .lname {
+        width: $w1p * 8.5;
+        // 彈性佈局 橫向排版
+        display: flex;
+        // 外間距
+        margin: {
+          bottom: 10px;
+        }
 
-			> .lname {
-				width: $w1p * 8.5;
-				// 彈性佈局 橫向排版
-				display: flex;
-				// 外間距
-				margin: {
-					bottom: 10px;
-				}
+        > h3 {
+          width: $tw + 10;
+          // 文字尺寸
+          font-size: $Trem * 1.4;
+        }
 
-				> h3 {
-					width: $tw + 10;
-					// 文字尺寸
-					font-size: $Trem * 1.4;
-				}
+        > li {
+          width: $nw - 10;
+          // 隱藏項目符號
+          list-style-type: none;
+        }
+      }
 
-				> li {
-					width: $nw - 10;
-					// 隱藏項目符號
-					list-style-type: none;
-				}
-			}
+      > .brief {
+        // 寬度
+        width: $w1p * 8.5;
+        // 文字對齊 左右切齊
+        text-align: justify;
+        // 外間距
+        margin: {
+          bottom: 10px;
+        }
+      }
 
-			> .brief {
-				// 寬度
-				width: $w1p * 8.5;
-				// 文字對齊 左右切齊
-				text-align: justify;
-				// 外間距
-				margin: {
-					bottom: 10px;
-				}
-			}
+      > #pricebox {
+        // 寬度
+        width: $w1p * 9;
+        // 隱藏項目符號
+        list-style-type: none;
+        // 彈性佈局
+        display: flex;
+        // 內間距
+        padding: {
+          bottom: 10px;
+        }
 
-			> #pricebox {
-				// 寬度
-				width: $w1p * 9;
-				// 隱藏項目符號
-				list-style-type: none;
-				// 彈性佈局
-				display: flex;
-				// 內間距
-				padding: {
-					bottom: 10px;
-				}
+        > .originalprice {
+          // 寬度
+          width: $w1p * 3.5;
+          // 文字尺寸
+          font-size: $Trem * 0.9;
+          // 內間距
+          padding: {
+            top: $Trem * 0.2;
+          }
 
-				> .originalprice {
-					// 寬度
-					width: $w1p * 3.5;
-					// 文字尺寸
-					font-size: $Trem * 0.9;
-					// 內間距
-					padding: {
-						top: $Trem * 0.2;
-					}
+          > span {
+            padding: {
+              left: 5px;
+              right: 5px;
+            }
+            // 文字顏色
+            color: blue;
+          }
+        }
 
-					> span {
-						padding: {
-							left: 5px;
-							right: 5px;
-						}
-						// 文字顏色
-						color: blue;
-					}
-				}
+        > .bargainprice {
+          // 寬度
+          width: $w1p * 4;
+          // 文字尺寸
+          font-size: $Trem * 1.2;
 
-				> .bargainprice {
-					// 寬度
-					width: $w1p * 4;
-					// 文字尺寸
-					font-size: $Trem * 1.2;
+          > span {
+            // em or rem 的尺寸，基於 根目錄 之下的值為基準
+            font-size: $Trem * 1.5;
+            padding: {
+              left: 5px;
+              right: 5px;
+            }
+            // 文字顏色
+            color: brown;
+            // 文字粗細
+            font-weight: 600;
+          }
+        }
 
-					> span {
-						// em or rem 的尺寸，基於 根目錄 之下的值為基準
-						font-size: $Trem * 1.5;
-						padding: {
-							left: 5px;
-							right: 5px;
-						}
-						// 文字顏色
-						color: brown;
-						// 文字粗細
-						font-weight: 600;
-					}
-				}
+        > .car {
+          // 寬度
+          width: $w1p * 2;
+        }
+      }
+    }
 
-				> .car {
-					// 寬度
-					width: $w1p * 2;
-				}
-			}
-		}
+    > .more {
+      width: $w1p * 8;
+      // 文字對齊 右
+      text-align: right;
+      // 隱藏項目符號
+      @include DNli;
+      // 文字尺寸
+      font-size: $Trem * 1.1;
+      // 英文轉換為大寫
+      text-transform: uppercase;
+      // 字距
+      letter-spacing: 2px;
 
-		> .more {
-			width: $w1p * 8;
-			// 文字對齊 右
-			text-align: right;
-			// 隱藏項目符號
-			@include DNli;
-			// 文字尺寸
-			font-size: $Trem * 1.1;
-			// 英文轉換為大寫
-			text-transform: uppercase;
-			// 字距
-			letter-spacing: 2px;
+      // 內間距
+      padding: {
+        bottom: 15px;
+      }
 
-			// 內間距
-			padding: {
-				bottom: 15px;
-			}
+      > a {
+        // 寬度 高度 px 設定 內間距 padding 上下 左右
+        padding: 5px 30px;
+        // 顯示方式 文字方塊
+        display: inline-block;
+        background-color: rgb(155, 39, 39);
+        // 取消連結底線樣式
+        text-decoration: none;
+        // 顏色
+        color: white;
+        // 圓角矩形 線段的粗細 線段的樣式(實線) 顏色
+        border: 1.5px solid rgb(68, 7, 7);
+        border-radius: 20px;
+      }
+    }
+  }
 
-			> a {
-				// 寬度 高度 px 設定 內間距 padding 上下 左右
-				padding: 5px 30px;
-				// 顯示方式 文字方塊
-				display: inline-block;
-				background-color: rgb(155, 39, 39);
-				// 取消連結底線樣式
-				text-decoration: none;
-				// 顏色
-				color: white;
-				// 圓角矩形 線段的粗細 線段的樣式(實線) 顏色
-				border: 1.5px solid rgb(68, 7, 7);
-				border-radius: 20px;
-			}
-		}
-	}
+  // 好物分享
+  > #share {
+    // 計算式
+    $tw: $w1p * 7;
+    $nw: $w1p * 10 - $tw;
 
-	// 好物分享
-	> #share {
-		// 計算式
-		$tw: $w1p * 7;
-		$nw: $w1p * 10 - $tw;
+    $TFS: $Trem * 1.7;
+    $NFS: $Trem * 1.1;
+    background-image: url(../../images/BG/001.png);
 
-		$TFS: $Trem * 1.7;
-		$NFS: $Trem * 1.1;
-		background-image: url(../../images/BG/001.png);
+    > h1 {
+      // 文字尺寸
+      font-size: $Trem * 2 + $Trem * 0.3;
+      // 標題置中
+      text-align: center;
+      // 內間距
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      }
+    }
+    > article {
+      > .scommodity {
+        // 寬度
+        width: $w1p * 9;
 
-		> h1 {
-			// 文字尺寸
-			font-size: $Trem * 2 + $Trem * 0.3;
-			// 標題置中
-			text-align: center;
-			// 內間距
-			padding: {
-				top: 15px;
-				bottom: 15px;
-			}
-		}
-		> article {
-			> .scommodity {
-				// 寬度
-				width: $w1p * 9;
+        // 外間距
+        margin: {
+          bottom: 20px;
+        }
 
-				// 外間距
-				margin: {
-					bottom: 20px;
-				}
+        // 背景顏色
+        background-color: rgb(255, 255, 255);
+        // 陰影 x軸 y軸 模糊程度 顏色
+        box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
 
-				// 背景顏色
-				background-color: rgb(255, 255, 255);
-				// 陰影 x軸 y軸 模糊程度 顏色
-				box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+        > .null {
+          height: 20px;
+        }
+        > .images {
+          // 寬度
+          width: $w1p * 9.2;
+          // 不設高度，用圖片去撐開
+          margin: {
+            bottom: 10px;
+          }
+          // 圓角矩形 邊框設定轉角的角度
+          border-radius: 15px;
 
-				> .null {
-					height: 20px;
-				}
-				> .images {
-					// 寬度
-					width: $w1p * 9.2;
-					// 不設高度，用圖片去撐開
-					margin: {
-						bottom: 10px;
-					}
-					// 圓角矩形 邊框設定轉角的角度
-					border-radius: 15px;
+          // background-color: yellowgreen;
 
-					// background-color: yellowgreen;
+          > a {
+            > img {
+              // 圖片邊框 線段的粗細 線段的樣式(實線) 顏色
+              border: 1.5px solid rgb(68, 7, 7);
+              border-radius: 15px;
+            }
+          }
+        }
 
-					> a {
-						> img {
-							// 圖片邊框 線段的粗細 線段的樣式(實線) 顏色
-							border: 1.5px solid rgb(68, 7, 7);
-							border-radius: 15px;
-						}
-					}
-				}
+        > .lname {
+          width: $w1p * 8.5;
+          // 彈性佈局 橫向排版
+          display: flex;
+          // 外間距
+          margin: {
+            top: 10px;
+            bottom: 10px;
+          }
 
-				> .lname {
-					width: $w1p * 8.5;
-					// 彈性佈局 橫向排版
-					display: flex;
-					// 外間距
-					margin: {
-						top: 10px;
-						bottom: 10px;
-					}
+          > h3 {
+            width: $tw + 10;
+            // 文字尺寸
+            font-size: $Trem * 1.4;
+          }
 
-					> h3 {
-						width: $tw + 10;
-						// 文字尺寸
-						font-size: $Trem * 1.4;
-					}
+          > li {
+            width: $nw - 10;
+            // 隱藏項目符號
+            list-style-type: none;
+          }
+        }
 
-					> li {
-						width: $nw - 10;
-						// 隱藏項目符號
-						list-style-type: none;
-					}
-				}
+        > .brief {
+          // 寬度
+          width: $w1p * 8.5;
+          // 文字對齊 左右切齊
+          text-align: justify;
 
-				> .brief {
-					// 寬度
-					width: $w1p * 8.5;
-					// 文字對齊 左右切齊
-					text-align: justify;
+          padding: {
+            bottom: 15px;
+          }
+        }
+      }
+    }
+    > .more {
+      width: $w1p * 8;
+      // 文字對齊 右
+      text-align: right;
+      // 隱藏項目符號
+      @include DNli;
+      // 文字尺寸
+      font-size: $Trem * 1.1;
+      // 英文轉換為大寫
+      text-transform: uppercase;
+      // 字距
+      letter-spacing: 2px;
 
-					padding: {
-						bottom: 15px;
-					}
-				}
-			}
-		}
-		> .more {
-			width: $w1p * 8;
-			// 文字對齊 右
-			text-align: right;
-			// 隱藏項目符號
-			@include DNli;
-			// 文字尺寸
-			font-size: $Trem * 1.1;
-			// 英文轉換為大寫
-			text-transform: uppercase;
-			// 字距
-			letter-spacing: 2px;
+      // 內間距
+      padding: {
+        bottom: 15px;
+      }
 
-			// 內間距
-			padding: {
-				bottom: 15px;
-			}
-
-			> a {
-				// 寬度 高度 px 設定 內間距 padding 上下 左右
-				padding: 5px 30px;
-				// 顯示方式 文字方塊
-				display: inline-block;
-				background-color: rgb(155, 39, 39);
-				// 取消連結底線樣式
-				text-decoration: none;
-				// 顏色
-				color: white;
-				// 圓角矩形 線段的粗細 線段的樣式(實線) 顏色
-				border: 1.5px solid rgb(68, 7, 7);
-				border-radius: 20px;
-			}
-		}
-	}
+      > a {
+        // 寬度 高度 px 設定 內間距 padding 上下 左右
+        padding: 5px 30px;
+        // 顯示方式 文字方塊
+        display: inline-block;
+        background-color: rgb(155, 39, 39);
+        // 取消連結底線樣式
+        text-decoration: none;
+        // 顏色
+        color: white;
+        // 圓角矩形 線段的粗細 線段的樣式(實線) 顏色
+        border: 1.5px solid rgb(68, 7, 7);
+        border-radius: 20px;
+      }
+    }
+  }
 }
