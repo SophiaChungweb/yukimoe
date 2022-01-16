@@ -19,9 +19,13 @@ function copyrightcontent () {
     // 在 footer 內，新增 div 子元素
     footer.appendChild(div);
 
-    // 純文字
-    // div.textContent = "DIY COOKIE版權宣告 &copy; 2019";
-
-    // html語法
+    // html語法 若要寫入 id or class ，最外層需要用 單引號 包覆
     div.innerHTML = 'DIY COOKIE版權宣告 &copy; 2019 - <span id="year"></span> YUKIMOE DESIGN';
+
+    // 調整 框架 位置
+
+    let address = document.getElementById('address');
+
+    // 3. 在被選取的元素之前插入內容 before() 置入被選取元素之前
+    address.before(div);
 }
