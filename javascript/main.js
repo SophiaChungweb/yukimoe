@@ -29,3 +29,18 @@ function copyrightcontent () {
     // 3. 在被選取的元素之前插入內容 before() 置入被選取元素之前
     address.before(div);
 }
+
+smallnavcon();
+
+// 新增 smallnavcon 的內容
+function smallnavcon() {
+    // 新增標籤 ul 與 li
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+
+    // 在 smallnav 內新增，宣告變數
+    let SN = document.getElementById('smallnav');
+
+    // 建立 ul 框架，給予 id 名稱
+    SN.appendChild(ul);
+}
