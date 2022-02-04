@@ -55,7 +55,7 @@ function smallnavcon() {
     for ( let i = 0; i < navclass.length; i++) {
         let li = document.createElement('li');
         // 新增屬性
-        li.setAttribute("class", navclass[li]);
+        li.setAttribute("class", navclass[i]);
         // ul 內新增 li 清單
         phonenav.appendChild(li);
 
