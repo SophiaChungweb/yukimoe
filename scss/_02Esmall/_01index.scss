@@ -19,7 +19,6 @@
 header {
 	// 寬度 100%;
 	width: $w1p * 10;
-	background-color: violet;
 	> #mainvav {
 		/*
         浮動對齊的問題float
@@ -32,7 +31,6 @@ header {
         */
 		width: $w1p * 10;
 		// 設定高度 單位為 % ( 未給予基準值，所以無法計算出實際高度 )
-		background-color: rgb(241, 105, 42);
 		// 解決方式二：清除浮動狀態，由 nav 設定 寫在 53行
 
 		// 單位不同無法計算，所以改為同一位 vw
@@ -44,7 +42,7 @@ header {
 		// 靠上
 		top: 0;
 		z-index: 999;
-		background-color: wheat;
+		background-color: rgba(229, 152, 236, 0.918);
 
 		// 靠左排列(與menubtn同一行)
 		#logo {
@@ -52,7 +50,7 @@ header {
 			// width: $w10 * 8 + 5%;
 
 			float: left;
-			background-color: brown;
+			background-color: rgb(255, 218, 9);
 		}
 		#iconbox {
 			// 呼叫 混合函式
@@ -67,7 +65,7 @@ header {
 			height: 70px;
 			// 浮點對齊法：靠左對齊 float:left
 			float: left;
-			background-color: aquamarine;
+			// background-color: aquamarine;
 			// 文字取代圖片，呈現背景圖，而隱藏文字；首行縮排
 			text-indent: -9999px;
 			@include PhoneMenu(center, contain, icon, "menubtn.png");
@@ -102,7 +100,7 @@ header {
 			// 位移 靠右 要設定 上和右 與頁面間距
 			top: 10px;
 			right: 10px;
-			background-color: rosybrown;
+			background-color: rgb(255, 255, 255);
 		}
 		> h1 {
 			// 寬度
@@ -111,7 +109,7 @@ header {
 			height: 110px;
 			text-align: center;
 			line-height: 110px;
-			background-color: yellowgreen;
+			background-color: rgba(229, 152, 236, 0.918);
 		}
 		> ul {
 			// 先設寬度及背景顏色查看位置
@@ -130,7 +128,7 @@ header {
 			// 彈性佈局 排版 display：使其由下往下整齊排列，flex-wrap：使其由左而右排列
 			display: flex;
 			flex-wrap: wrap;
-			background-color: salmon;
+			background-color: rgba(229, 152, 236, 0.918);
 
 			> .item {
 				width: $w1p * 9 / 2;
@@ -139,7 +137,8 @@ header {
 					top: 10px;
 					bottom: 10px;
 				}
-				background-color: sandybrown;
+				background-color: rgba(255, 255, 255, 0.5);
+				text-align: center;
 			}
 
 			> .itemtwo {
@@ -149,11 +148,13 @@ header {
 					top: 10px;
 					bottom: 10px;
 				}
-				background-color: teal;
-			}
+				background-color: rgba(255, 255, 255, 0.5);
+				text-align: center;
 
-			> .box {
-				background-color: slateblue;
+				> .box {
+					background-color: rgba(255, 255, 255, 0.5);
+					text-align: center;
+				}
 			}
 		}
 	}

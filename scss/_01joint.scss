@@ -1,26 +1,26 @@
 // 頁面與物件的間距：外間距--上下為0，左右自動；內間距上下左右為0；設定在「*」(通用選擇器)
 // 外間距--上下為0，左右自動 margin；若物件寬度小於100%時，物件將會自動垂直 置中
 * {
-  margin: 0 auto;
-  // 內間距上下左右為0 padding
-  padding: 0;
+	margin: 0 auto;
+	// 內間距上下左右為0 padding
+	padding: 0;
 }
 
 body,
 html {
-  // 寬度
-  width: 100%;
-  // 最大寬度
-  max-width: 100vw;
-  // 高度
-  height: 100%;
+	// 寬度
+	width: 100%;
+	// 最大寬度
+	max-width: 100vw;
+	// 高度
+	height: 100%;
 }
 
 // 圖片等比控制
 img {
-  // 寬度 100%；高度自動
-  width: 100%;
-  height: auto;
+	// 寬度 100%；高度自動
+	width: 100%;
+	height: auto;
 }
 
 // 變數區
@@ -42,89 +42,89 @@ $Trem: 1rem;
  無法由@media(媒體判斷)去呼叫「外部連結檔」
 */
 %DN {
-  // 隱藏
-  display: none;
+	// 隱藏
+	display: none;
 }
 
 // 計算區
 // 計算 header logo 與 menubtn 之間的寬度 手機裝置
 @mixin LBW($WM, $WA) {
-  // 計算區 1.設變數(承載值的物件名稱)$WM=倍數 $WA=加的數值
-  $LogoW: $w10 * $WM + $WA;
-  //  menubtn寬度 = 父框架的寬度(100) - logo寬度(85)
-  $MBW: $w10 * 10 - $LogoW;
+	// 計算區 1.設變數(承載值的物件名稱)$WM=倍數 $WA=加的數值
+	$LogoW: $w10 * $WM + $WA;
+	//  menubtn寬度 = 父框架的寬度(100) - logo寬度(85)
+	$MBW: $w10 * 10 - $LogoW;
 
-  // 連動 計算寬度 logo 與 menubtn
+	// 連動 計算寬度 logo 與 menubtn
 
-  // 呼叫 id (標籤 或 id class)
-  #logo {
-    // 寬度
-    width: $LogoW;
-  }
-  #menubtn {
-    // 寬度
-    width: $MBW;
-  }
+	// 呼叫 id (標籤 或 id class)
+	#logo {
+		// 寬度
+		width: $LogoW;
+	}
+	#menubtn {
+		// 寬度
+		width: $MBW;
+	}
 }
 
 // 撰寫 scss 的「混合函式 mixin」，修正 scss 的繼承功能，無法被 @media 使用的問題
 @mixin DN {
-  display: none;
+	display: none;
 }
 
 // 開啟隱藏物件
 @mixin OB {
-  // 顯示方式：區塊
-  display: block;
+	// 顯示方式：區塊
+	display: block;
 }
 
 // 清除浮動 float
 @mixin ClearFloat {
-  // 清除左右浮動
-  clear: both;
+	// 清除左右浮動
+	clear: both;
 }
 
 // 隱藏項目符號
 @mixin DNli {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 // 商品 廣告背景圖片語法
 @mixin BPhoto($PosiTion, $Size, $Data, $Image) {
-  // 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
-  // 問題：路徑無法直接讀取變數名稱
-  // 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
-  width: $w10 * 10;
+	// 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
+	// 問題：路徑無法直接讀取變數名稱
+	// 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
+	width: $w10 * 10;
 
-  // 不重覆
-  background-repeat: no-repeat;
-  // 背景圖片 置中對齊
-  background-position: $PosiTion;
-  // 背景圖片 尺寸
-  background-size: $Size;
-  // 背景圖片
-  background-image: url(../../images/#{$Data}/#{$Image});
+	// 不重覆
+	background-repeat: no-repeat;
+	// 背景圖片 置中對齊
+	background-position: $PosiTion;
+	// 背景圖片 尺寸
+	background-size: $Size;
+	// 背景圖片
+	background-image: url(../../images/#{$Data}/#{$Image});
 }
 
 // 手機版選單
 @mixin PhoneMenu($PosiTion, $Size, $Data, $Image) {
-  // 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
-  // 問題：路徑無法直接讀取變數名稱
-  // 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
-  // 不重覆
-  background-repeat: no-repeat;
-  // 背景圖片 置中對齊
-  background-position: $PosiTion;
-  // 背景圖片 尺寸
-  background-size: $Size;
-  // 背景圖片
-  background-image: url(../../images/#{$Data}/#{$Image});
+	// 變數設定 1.對齊 $PosiTion 2.尺寸 $Size 3.資料夾位置 $Data 4.圖片$Image
+	// 問題：路徑無法直接讀取變數名稱
+	// 解答：scss提供的語法，插值寫法( 基於 javascript 的 es6 語法)，#{ 自訂名稱(只能英文和數字) }，例如：#{$Image}，寫在路徑上
+	// 不重覆
+	background-repeat: no-repeat;
+	// 背景圖片 置中對齊
+	background-position: $PosiTion;
+	// 背景圖片 尺寸
+	background-size: $Size;
+	// 背景圖片
+	background-image: url(../../images/#{$Data}/#{$Image});
 }
 
 // 圓角矩形
 @mixin Rounded($Num) {
-  // 邊框角度設定，建議單位為 像素
-  border-radius: $Num + px;
+	// 邊框角度設定，建議單位為 像素
+	border-radius: $Num + px;
 }
 
 // 限量商品 架構
@@ -147,172 +147,145 @@ $NFS: $Trem * 1.1($nfsfsm)
   $imagesra,
   $lines
 ) {
-  // 計算式
-  $tw: $w1p * $twm;
-  $nw: $w1p * 10 - $tw;
+	// 計算式
+	$tw: $w1p * $twm;
+	$nw: $w1p * 10 - $tw;
+	$TFS: $Trem * $tfsfsm;
+	$NFS: $Trem * $nfsfsm;
+	// 寬度 $w1p * 8
+	width: $mainw; // 外間距
+	margin: {
+		bottom: 20px;
+	}
+	// 背景顏色 255, 255, 255
+	background-color: rgb($br, $bg, $bb);
+	// 陰影 x軸 y軸 模糊程度 顏色
+	box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
+	> #titlebox {
+		// 項目隱藏符號
+		list-style-type: none; // 字距
+		letter-spacing: $titlele;
+		// 與外框的距離
+		padding: {
+			top: 15px;
+			bottom: 10px;
+		} // 寬度
+		width: $w1p * 8.5;
+		// 彈性佈局
+		display: flex;
+		// 換行
+		flex-wrap: wrap;
+		> .title {
+			width: $tw;
+			font-size: $TFS;
+		}
+		> .number {
+			width: $nw;
+			font-size: $NFS;
+			text-align: right; // 計算 title 與 number 內間距的差
 
-  $TFS: $Trem * $tfsfsm;
-  $NFS: $Trem * $nfsfsm;
+			padding {
+				top: $TFS - $NFS;
+			}
+		}
+		> .text {
+			width: $w1p * 10;
+			text-align: right;
+		}
+	}
+	> .images {
+		// 寬度
+		width: $w1p * 9.5;
+		// 高度 設定絕對高，不會隨著裝置高度變動
+		height: 230px;
+		margin: {
+			bottom: 10px;
+		}
+		// 圓角矩形 邊框設定轉角的角度 15px
+		border-radius: $imagesra; // background-color: yellowgreen;
+		> a {
+			> img {
+				// 圖片邊框 線段的粗細 1.5px 線段的樣式(實線) 顏色
+				border: $lines solid rgb(68, 7, 7);
+				border-radius: $imagesra;
+			}
+		}
+	}
+	> .lname {
+		width: $w1p * 9;
+		// 彈性佈局 橫向排版
+		display: flex;
+		// 外間距
+		margin: {
+			bottom: 15px;
+		}
+		background-color: yellow;
+		> h3 {
+			width: $tw + 10; // 文字尺寸
+			font-size: $Trem * 1.4;
+		}
+		> li {
+			width: $nw - 10;
+			// 隱藏項目符號
+			list-style-type: none;
+		}
+	}
+	> .brief {
+		// 寬度
+		width: $w1p * 8.5;
+		// 文字對齊 左右切齊
+		text-align: justify;
+		// 外間距
+		margin: {
+			bottom: 10px;
+		}
+	}
 
-  // 寬度 $w1p * 8
-  width: $mainw;
-
-  // 外間距
-  margin: {
-    bottom: 20px;
-  }
-  // 背景顏色 255, 255, 255
-  background-color: rgb($br, $bg, $bb);
-  // 陰影 x軸 y軸 模糊程度 顏色
-  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.25);
-
-  > #titlebox {
-    // 項目隱藏符號
-    list-style-type: none;
-    // 字距
-    letter-spacing: $titlele;
-    // 與外框的距離
-    padding: {
-      top: 15px;
-      bottom: 10px;
-    }
-
-    // 寬度
-    width: $w1p * 8.5;
-    // 彈性佈局
-    display: flex;
-    // 換行
-    flex-wrap: wrap;
-
-    > .title {
-      width: $tw;
-      font-size: $TFS;
-    }
-    > .number {
-      width: $nw;
-      font-size: $NFS;
-      text-align: right;
-      // 計算 title 與 number 內間距的差
-      padding {
-        top: $TFS - $NFS;
-      }
-    }
-    > .text {
-      width: $w1p * 10;
-      text-align: right;
-    }
-  }
-  > .images {
-    // 寬度
-    width: $w1p * 9.5;
-    // 高度 設定絕對高，不會隨著裝置高度變動
-    height: 230px;
-    margin: {
-      bottom: 10px;
-    }
-    // 圓角矩形 邊框設定轉角的角度 15px
-    border-radius: $imagesra;
-
-    // background-color: yellowgreen;
-
-    > a {
-      > img {
-        // 圖片邊框 線段的粗細 1.5px 線段的樣式(實線) 顏色
-        border: $lines solid rgb(68, 7, 7);
-        border-radius: $imagesra;
-      }
-    }
-  }
-
-  > .lname {
-    width: $w1p * 9;
-    // 彈性佈局 橫向排版
-    display: flex;
-    // 外間距
-    margin: {
-      bottom: 15px;
-    }
-    background-color: yellow;
-
-    > h3 {
-      width: $tw + 10;
-      // 文字尺寸
-      font-size: $Trem * 1.4;
-    }
-
-    > li {
-      width: $nw - 10;
-      // 隱藏項目符號
-      list-style-type: none;
-    }
-  }
-
-  > .brief {
-    // 寬度
-    width: $w1p * 8.5;
-    // 文字對齊 左右切齊
-    text-align: justify;
-    // 外間距
-    margin: {
-      bottom: 10px;
-    }
-  }
-
-  > #pricebox {
-    // 寬度
-    width: $w1p * 9;
-    // 隱藏項目符號
-    list-style-type: none;
-    // 彈性佈局
-    display: flex;
-    // 外間距
-    padding: {
-      bottom: 10px;
-    }
-
-    > .originalprice {
-      // 寬度
-      width: $w1p * 3.5;
-      // 文字尺寸
-      font-size: $Trem * 0.9;
-      // 內間距
-      padding: {
-        top: $Trem * 0.3;
-      }
-
-      > span {
-        padding: {
-          left: 5px;
-          right: 5px;
-        }
-        // 文字顏色
-        color: blue;
-      }
-    }
-
-    > .bargainprice {
-      // 寬度
-      width: $w1p * 4;
-      // 文字尺寸
-      font-size: $Trem * 1.2;
-
-      > span {
-        // em or rem 的尺寸，基於 根目錄 之下的值為基準
-        font-size: $Trem * 1.7;
-        padding: {
-          left: 5px;
-          right: 5px;
-        }
-        // 文字顏色
-        color: brown;
-        // 文字粗細
-        font-weight: 600;
-      }
-    }
-
-    > .car {
-      // 寬度
-      width: $w1p * 2;
-    }
-  }
+	> #pricebox {
+		// 寬度
+		width: $w1p * 9;
+		// 隱藏項目符號
+		list-style-type: none;
+		// 彈性佈局
+		display: flex;
+		// 外間距
+		padding: {
+			bottom: 10px;
+		}
+		> .originalprice {
+			// 寬度
+			width: $w1p * 3.5; // 文字尺寸
+			font-size: $Trem * 0.9; // 內間距
+			padding: {
+				top: $Trem * 0.3;
+			}
+			> span {
+				padding: {
+					left: 5px;
+					right: 5px;
+				} // 文字顏色
+				color: blue;
+			}
+		}
+		> .bargainprice {
+			// 寬度
+			width: $w1p * 4;
+			// 文字尺寸
+			font-size: $Trem * 1.2;
+			> span {
+				// em or rem 的尺寸，基於 根目錄 之下的值為基準
+				font-size: $Trem * 1.7;
+				padding: {
+					left: 5px;
+					right: 5px;
+				} // 文字顏色
+				color: brown; // 文字粗細
+				font-weight: 600;
+			}
+		}
+		> .car {
+			// 寬度
+			width: $w1p * 2;
+		}
+	}
 }

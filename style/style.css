@@ -36,7 +36,6 @@ $NFS: $Trem * 1.1($nfsfsm)
 @media screen and (max-width: 576px) {
   header {
     width: 100%;
-    background-color: violet;
   }
   header > #mainvav {
     /*
@@ -49,11 +48,10 @@ $NFS: $Trem * 1.1($nfsfsm)
         3、利用圖片高度撐開父框架的高
         */
     width: 100%;
-    background-color: #f1692a;
     position: fixed;
     top: 0;
     z-index: 999;
-    background-color: wheat;
+    background-color: rgba(229, 152, 236, 0.918);
   }
   header > #mainvav #logo {
     width: 85vw;
@@ -63,7 +61,7 @@ $NFS: $Trem * 1.1($nfsfsm)
   }
   header > #mainvav #logo {
     float: left;
-    background-color: brown;
+    background-color: #ffda09;
   }
   header > #mainvav #iconbox {
     display: none;
@@ -74,7 +72,6 @@ $NFS: $Trem * 1.1($nfsfsm)
   header > #mainvav #menubtn {
     height: 70px;
     float: left;
-    background-color: aquamarine;
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center;
@@ -101,14 +98,14 @@ $NFS: $Trem * 1.1($nfsfsm)
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: rosybrown;
+    background-color: white;
   }
   header > #menunav > h1 {
     width: 100%;
     height: 110px;
     text-align: center;
     line-height: 110px;
-    background-color: yellowgreen;
+    background-color: rgba(229, 152, 236, 0.918);
   }
   header > #menunav > ul {
     width: 90%;
@@ -121,24 +118,27 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    background-color: salmon;
+    background-color: rgba(229, 152, 236, 0.918);
   }
   header > #menunav > ul > .item {
     width: 45%;
     height: 70px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: sandybrown;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
   }
   header > #menunav > ul > .itemtwo {
     width: 28.33333%;
     height: 90px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: teal;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
   }
-  header > #menunav > ul > .box {
-    background-color: slateblue;
+  header > #menunav > ul > .itemtwo > .box {
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
   }
   footer {
     margin-top: 2rem;
