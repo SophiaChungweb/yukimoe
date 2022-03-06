@@ -195,7 +195,7 @@ $NFS: $Trem * 1.1($nfsfsm)
     width: 100vw;
     list-style-type: none;
     padding-bottom: 385px;
-    background-color: cadetblue;
+    background-color: #96e5e7;
   }
   #main #banner #imgbox li {
     width: 100vw;
@@ -1500,4 +1500,3 @@ $NFS: $Trem * 1.1($nfsfsm)
     display: none;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -47,7 +47,7 @@
       @include DNli;
       // 內間距 設定 方方間距，當成圖片的高度，單位為 % or vh
       padding-bottom: $imgpadding;
-      background-color: cadetblue;
+      background-color: rgb(150, 229, 231);
       li {
         width: $w10 * 10;
         float: left;
